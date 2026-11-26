@@ -1,0 +1,263 @@
+@import "@fontsource-variable/sora";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/jetbrains-mono";
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  color-scheme: dark;
+
+  /* DESIGN.md — cores */
+  --bg: #05050d;
+  --surface-1: #0b0918;
+  --surface-2: #120f22;
+  --surface-3: #1a1430;
+  --border: rgba(255, 255, 255, 0.09);
+  --text: #ece9fb;
+  --text-dim: #9a93bd;
+  --text-faint: #8f88b3;
+  --action: #6b4bec;
+  --action-accent: #9b82ff;
+  --reward: #ffd700;
+  --reward-soft: #ffe680;
+  --glow: #fff2c0;
+  --success: #4ade80;
+  --error: #fb7185;
+  --warn: #ffb27a;
+
+  /* shadcn/ui — tudo aponta para os tokens acima */
+  --background: var(--bg);
+  --foreground: var(--text);
+  --card: var(--surface-1);
+  --card-foreground: var(--text);
+  --popover: var(--surface-2);
+  --popover-foreground: var(--text);
+  --primary: var(--action);
+  --primary-foreground: #ffffff;
+  --secondary: var(--surface-3);
+  --secondary-foreground: var(--text);
+  --muted: var(--surface-2);
+  --muted-foreground: var(--text-dim);
+  --accent: var(--surface-3);
+  --accent-foreground: var(--text);
+  --destructive: var(--error);
+  --destructive-foreground: var(--bg);
+  --input: rgba(255, 255, 255, 0.12);
+  --ring: var(--reward);
+
+  /* DESIGN.md — raios 12 / 16 / 24 */
+  --radius: 0.75rem;
+  --radius-card: 1rem;
+  --radius-sheet: 1.5rem;
+
+  /* constelações (selos e ícones; nunca botão) */
+  --const-fu: #ffd666;
+  --const-fe: #78c8ff;
+  --const-mo: #ff82ff;
+  --const-be: #ff8c78;
+  --const-db: #6ee6c8;
+  --const-do: #ffaa50;
+  --const-se: #ff78aa;
+  --const-em: #d7ff78;
+  --const-ia: #be96ff;
+  --const-bo: #ffcda0;
+  --const-jg: #8c96ff;
+  --const-es: #f0f0f0;
+}
+
+@theme inline {
+  --font-sans: "Inter Variable", "Inter", system-ui, sans-serif;
+  --font-display: "Sora Variable", "Sora", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, monospace;
+
+  --color-bg: var(--bg);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-text: var(--text);
+  --color-text-dim: var(--text-dim);
+  --color-text-faint: var(--text-faint);
+  --color-action: var(--action);
+  --color-action-accent: var(--action-accent);
+  --color-reward: var(--reward);
+  --color-reward-soft: var(--reward-soft);
+  --color-glow: var(--glow);
+  --color-success: var(--success);
+  --color-error: var(--error);
+  --color-warn: var(--warn);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  --radius-card: 1rem;
+  --radius-sheet: 1.5rem;
+
+  --color-const-fu: var(--const-fu);
+  --color-const-fe: var(--const-fe);
+  --color-const-mo: var(--const-mo);
+  --color-const-be: var(--const-be);
+  --color-const-db: var(--const-db);
+  --color-const-do: var(--const-do);
+  --color-const-se: var(--const-se);
+  --color-const-em: var(--const-em);
+  --color-const-ia: var(--const-ia);
+  --color-const-bo: var(--const-bo);
+  --color-const-jg: var(--const-jg);
+  --color-const-es: var(--const-es);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    background-color: var(--bg);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background: var(--action);
+    color: #ffffff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--reward);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+  }
+}
+
+/* Céu: gradiente violeta/dourado + campo de estrelas sutil (só CSS). */
+.ceu {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background:
+    radial-gradient(60% 48% at 8% 0%, rgba(107, 75, 236, 0.2), transparent 62%),
+    radial-gradient(34% 28% at 94% 6%, rgba(255, 215, 0, 0.08), transparent 70%),
+    var(--bg);
+}
+
+.ceu::before,
+.ceu::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  pointer-events: none;
+  background-repeat: repeat;
+  background-size: 340px 340px;
+}
+
+.ceu::before {
+  opacity: 0.42;
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, #ffffff, transparent),
+    radial-gradient(1px 1px at 120px 80px, #ffffff, transparent),
+    radial-gradient(1.5px 1.5px at 250px 40px, #ffe680, transparent),
+    radial-gradient(1px 1px at 80px 210px, #ffffff, transparent),
+    radial-gradient(1px 1px at 190px 170px, #ffffff, transparent),
+    radial-gradient(1.5px 1.5px at 300px 250px, #ffffff, transparent),
+    radial-gradient(1px 1px at 40px 300px, #9b82ff, transparent),
+    radial-gradient(1px 1px at 220px 310px, #ffffff, transparent);
+}
+
+.ceu::after {
+  inset: 0;
+  opacity: 0.25;
+  animation: piscar 9s ease-in-out infinite alternate;
+  background-image:
+    radial-gradient(1px 1px at 15% 65%, #ffffff, transparent),
+    radial-gradient(1px 1px at 70% 22%, #ffe680, transparent),
+    radial-gradient(1.5px 1.5px at 88% 72%, #ffffff, transparent),
+    radial-gradient(1px 1px at 42% 88%, #ffffff, transparent),
+    radial-gradient(1px 1px at 58% 48%, #9b82ff, transparent);
+}
+
+@keyframes piscar {
+  from {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 0.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .ceu::after {
+    animation: none;
+    opacity: 0.3;
+  }
+}
+
+/* Vidro só onde o DESIGN permite: barras e sheets. */
+.vidro {
+  background: color-mix(in srgb, var(--surface-1) 76%, transparent);
+  backdrop-filter: blur(18px) saturate(1.15);
+  -webkit-backdrop-filter: blur(18px) saturate(1.15);
+}
+
+.brilho-acao {
+  box-shadow: 0 0 0 1px rgba(155, 130, 255, 0.25), 0 10px 36px -12px rgba(107, 75, 236, 0.7);
+}
+
+.brilho-estrela {
+  box-shadow: 0 0 28px -4px rgba(255, 215, 0, 0.45);
+}
