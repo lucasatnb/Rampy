@@ -1,0 +1,702 @@
+{
+  "bot-discord": {
+    "nome": "Bot de Discord",
+    "projeto": "um bot de Discord",
+    "descricao": "Um bot que responde no servidor e lembra de quem falou com ele.",
+    "icone": "🤖",
+    "estrelas": [
+      "variaveis",
+      "condicoes",
+      "funcoes",
+      "apis",
+      "listas",
+      "arquivos"
+    ],
+    "jaAcesas": [],
+    "aulas": [
+      {
+        "titulo": "Guardar quem falou com o bot",
+        "skill": "variaveis",
+        "ex": "variaveis",
+        "texto": "Antes de responder, o bot precisa guardar o nome de quem mandou a mensagem. Isso é uma variável: um espaço com nome para guardar um valor.",
+        "passos": [
+          "Aula: o que é uma variável e por que o bot precisa lembrar do usuário",
+          "Programação: crie a variável <code>usuario</code> e monte a saudação",
+          "Programação com IA: peça à IA uma lista de membros, revise e corrija"
+        ],
+        "why": "Sem isso o bot não sabe com quem está falando. É o primeiro tijolo do seu projeto."
+      },
+      {
+        "titulo": "Responder só quando for chamado",
+        "skill": "condicoes",
+        "ex": "condicoes",
+        "texto": "Um bot não responde a tudo: ele checa se a mensagem é para ele. Isso é uma condição — um if que decide o caminho.",
+        "passos": [
+          "Aula: condições e eventos — o bot reage a uma mensagem",
+          "Programação: escreva o if que responde só quando a mensagem é \"oi\"",
+          "Programação com IA: peça o tratamento de erro e explique linha por linha"
+        ],
+        "why": "É aqui que o bot deixa de ser um script parado e passa a conversar."
+      },
+      {
+        "titulo": "Comandos que reaproveitam código",
+        "skill": "funcoes",
+        "ex": "funcoes",
+        "texto": "Seu bot vai ter uma loja de moedas, e vários comandos calculam preço com desconto. Em vez de repetir a conta em cada comando, você cria uma função e chama onde precisar.",
+        "passos": [
+          "Aula: função, parâmetros e retorno — escrever uma vez, usar em todo comando",
+          "Programação: crie a função que aplica o desconto de um comando da loja",
+          "Programação com IA: peça para dividir um comando grande em funções menores"
+        ],
+        "why": "Sem funções cada comando vira um bloco gigante e copiado. Com elas o bot cresce sem virar bagunça."
+      },
+      {
+        "titulo": "Lembrar de todos os membros",
+        "skill": "listas",
+        "ex": "listas",
+        "texto": "Um servidor tem muitos membros. O bot guarda todos em uma lista e filtra quem importa — por exemplo, quem passou do nível mínimo.",
+        "passos": [
+          "Aula: listas e objetos — guardar vários membros e consultar cada um",
+          "Programação: filtre a lista e devolva só os nomes de quem passou da nota de corte",
+          "Programação com IA: peça variações de filtro e confira se a lista original continua igual"
+        ],
+        "why": "Quase todo dado do Discord chega em lista. É a estrutura que você mais vai usar daqui para frente."
+      },
+      {
+        "titulo": "Conectar o bot ao Discord",
+        "skill": "apis",
+        "ex": "apis",
+        "texto": "A conexão com o Discord é uma API: um contrato pronto para enviar e receber dados, sem você inventar a rede.",
+        "passos": [
+          "Aula: o que é uma API e por que você não precisa inventar a conexão",
+          "Programação: simule a resposta da API e leia o nome que voltou",
+          "Programação com IA: revise o token, os escopos e o que nunca deve ir pro Git"
+        ],
+        "why": "Seu projeto sai do arquivo local e vira algo que outras pessoas usam."
+      },
+      {
+        "titulo": "Ler a configuração do bot",
+        "skill": "arquivos",
+        "ex": "arquivos",
+        "texto": "O bot guarda suas configurações em um arquivo de texto. Ler esse arquivo e entender as linhas é o que deixa o projeto organizado.",
+        "passos": [
+          "Aula: arquivos, linhas e por que a configuração não fica dentro do código",
+          "Programação: conte as linhas não vazias de um arquivo de configuração",
+          "Programação com IA: revise onde o arquivo de segredos mora e o que vai no .gitignore"
+        ],
+        "why": "Configuração fora do código é o primeiro passo para um projeto que você consegue manter."
+      }
+    ]
+  },
+  "crud-alunos": {
+    "nome": "CRUD de alunos",
+    "projeto": "um CRUD de alunos",
+    "descricao": "Criar, listar, editar e apagar alunos sem perder dados.",
+    "icone": "🗄️",
+    "estrelas": [
+      "banco",
+      "apis"
+    ],
+    "jaAcesas": [
+      "variaveis",
+      "interfaces"
+    ],
+    "aulas": [
+      {
+        "titulo": "Modelar o aluno e guardar de verdade",
+        "skill": "banco",
+        "ex": "banco",
+        "texto": "Um CRUD começa pelo dado: o que é um aluno, quais campos ele tem e onde isso fica guardado.",
+        "passos": [
+          "Aula: tabela, chave primária e o que é persistência",
+          "Programação: crie a lista de alunos e filtre os aprovados",
+          "Programação com IA: peça o modelo e questione cada campo escolhido"
+        ],
+        "why": "Interfaces você já sabe — pulamos. Aqui entra só o que falta para o CRUD existir."
+      },
+      {
+        "titulo": "Ler, criar e apagar sem perder dados",
+        "skill": "banco",
+        "ex": "banco2",
+        "texto": "As quatro operações do CRUD: criar, ler, atualizar e apagar. O cuidado está em não quebrar o que já existe.",
+        "passos": [
+          "Aula: as quatro operações e por que DELETE pede cuidado",
+          "Programação: adicione um aluno, remova outro e conte quantos ficaram",
+          "Programação com IA: gere os casos de teste e prove que o dado sumiu mesmo"
+        ],
+        "why": "É o coração do CRUD: manipular o dado sem quebrar o que já existe."
+      },
+      {
+        "titulo": "Ligar a tela à API",
+        "skill": "apis",
+        "ex": "apis",
+        "texto": "A tela conversa com o servidor por rotas: um pedido sai, uma resposta volta. É o contrato da sua aplicação.",
+        "passos": [
+          "Aula: rota, requisição e resposta — o que viaja entre as camadas",
+          "Programação: simule a resposta da API e leia o dado que voltou",
+          "Programação com IA: revise o contrato da API e o que acontece quando falha"
+        ],
+        "why": "Fecha o ciclo: o usuário clica e o banco muda. Seu projeto está de pé."
+      }
+    ]
+  },
+  "portfolio-web": {
+    "nome": "Portfólio web",
+    "projeto": "um portfólio web",
+    "descricao": "Uma página com a sua cara para mostrar seus projetos.",
+    "icone": "🪐",
+    "estrelas": [
+      "variaveis",
+      "condicoes",
+      "interfaces",
+      "git"
+    ],
+    "jaAcesas": [],
+    "aulas": [
+      {
+        "titulo": "Estruturar a página",
+        "skill": "interfaces",
+        "ex": "interfaces",
+        "texto": "Uma interface começa pela estrutura: o que existe na tela e qual é o papel de cada parte.",
+        "passos": [
+          "Aula: HTML semântico — cada parte tem um papel",
+          "Programação: descreva a tela do portfólio com título e seções",
+          "Programação com IA: peça uma revisão de acessibilidade e corrija"
+        ],
+        "why": "A base do seu site: o que existe na página antes de qualquer estilo."
+      },
+      {
+        "titulo": "Dar forma e identidade",
+        "skill": "interfaces",
+        "ex": "design",
+        "texto": "Depois da estrutura vem o visual: cores, contraste e hierarquia. É o que faz alguém confiar no seu trabalho.",
+        "passos": [
+          "Aula: layout, espaçamento e contraste",
+          "Programação: defina o tema visual com fundo, texto e destaque",
+          "Programação com IA: peça variações de layout e escolha com critério"
+        ],
+        "why": "É o que faz alguém confiar no seu trabalho em 5 segundos."
+      },
+      {
+        "titulo": "Publicar no Git",
+        "skill": "git",
+        "ex": "git",
+        "texto": "Publicar é parte da entrega: versionar o projeto e colocar no GitHub para o mundo ver.",
+        "passos": [
+          "Aula: commit, repositório e o que é versionamento",
+          "Programação: monte os comandos do primeiro commit",
+          "Programação com IA: revise o README e o que não pode vazar"
+        ],
+        "why": "Projeto que ninguém vê não conta. Publicar é parte da entrega."
+      }
+    ]
+  },
+  "jogo": {
+    "nome": "Jogo 2D",
+    "projeto": "um jogo 2D",
+    "descricao": "Um personagem que anda, colide e marca pontos em fases.",
+    "icone": "🎮",
+    "estrelas": [
+      "variaveis",
+      "condicoes",
+      "lacos",
+      "funcoes",
+      "listas"
+    ],
+    "jaAcesas": [],
+    "aulas": [
+      {
+        "titulo": "O personagem se move",
+        "skill": "variaveis",
+        "ex": "movimento",
+        "texto": "Movimento é estado: a posição do personagem é uma variável que muda a cada quadro.",
+        "passos": [
+          "Aula: coordenadas e variáveis de estado",
+          "Programação: crie posição e velocidade e atualize a posição",
+          "Programação com IA: peça ajuste de velocidade e compara as opções"
+        ],
+        "why": "Movimento é o primeiro sinal de vida do seu jogo."
+      },
+      {
+        "titulo": "Colisão e regras",
+        "skill": "condicoes",
+        "ex": "colisao",
+        "texto": "Sem regra não existe jogo: uma condição decide o que acontece quando o personagem bate em algo.",
+        "passos": [
+          "Aula: condições que rodam a cada quadro",
+          "Programação: use if/else para decidir o estado do jogo",
+          "Programação com IA: revisa os casos de borda que você esqueceu"
+        ],
+        "why": "Sem regra, não existe jogo — existe animação."
+      },
+      {
+        "titulo": "Pontuação e fases",
+        "skill": "lacos",
+        "ex": "lacos",
+        "texto": "As fases são uma coleção: um laço percorre cada uma e acumula os pontos.",
+        "passos": [
+          "Aula: laços e coleções para guardar inimigos e fases",
+          "Programação: some os pontos de cada fase com um for",
+          "Programação com IA: peça ideias de balanceamento e testa"
+        ],
+        "why": "Aqui o protótipo vira algo que dá vontade de jogar de novo."
+      }
+    ]
+  },
+  "const-FU": {
+    "nome": "Constelação · Fundamentos",
+    "projeto": "a constelação Fundamentos",
+    "descricao": "Exercícios das estrelas de Fundamentos abertas pelo mapa.",
+    "icone": "⭐",
+    "oculta": true,
+    "estrelas": [
+      "logica",
+      "strings",
+      "excecoes",
+      "algoritmos",
+      "recursao"
+    ],
+    "jaAcesas": [],
+    "aulas": [
+      {
+        "titulo": "FizzBuzz do bot",
+        "skill": "logica",
+        "ex": "logica",
+        "texto": "Pensar em passos e decisões antes de escrever código.",
+        "passos": [
+          "Aula: Pensar em passos e decisões antes de escrever código.",
+          "Programação: resolva \"FizzBuzz do bot\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Fundamentos revela as vizinhas no seu céu."
+      },
+      {
+        "titulo": "Nome com maiúsculas",
+        "skill": "strings",
+        "ex": "strings",
+        "texto": "Texto é uma sequência de caracteres que você corta, troca e junta.",
+        "passos": [
+          "Aula: Texto é uma sequência de caracteres que você corta, troca e junta.",
+          "Programação: resolva \"Nome com maiúsculas\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Fundamentos revela as vizinhas no seu céu."
+      },
+      {
+        "titulo": "Ler JSON sem quebrar",
+        "skill": "excecoes",
+        "ex": "excecoes",
+        "texto": "Erros acontecem: try/catch deixa o programa continuar em vez de parar.",
+        "passos": [
+          "Aula: Erros acontecem: try/catch deixa o programa continuar em vez de parar.",
+          "Programação: resolva \"Ler JSON sem quebrar\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Fundamentos revela as vizinhas no seu céu."
+      },
+      {
+        "titulo": "Maior da lista (sem Math.max)",
+        "skill": "algoritmos",
+        "ex": "algoritmos",
+        "texto": "Um algoritmo é um passo a passo: aqui, percorrer e guardar o melhor até agora.",
+        "passos": [
+          "Aula: Um algoritmo é um passo a passo: aqui, percorrer e guardar o melhor até agora.",
+          "Programação: resolva \"Maior da lista (sem Math.max)\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Fundamentos revela as vizinhas no seu céu."
+      },
+      {
+        "titulo": "Fatorial",
+        "skill": "recursao",
+        "ex": "recursao",
+        "texto": "Recursão é a função chamar a si mesma com um problema menor, até chegar no caso base.",
+        "passos": [
+          "Aula: Recursão é a função chamar a si mesma com um problema menor, até chegar no caso base.",
+          "Programação: resolva \"Fatorial\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Fundamentos revela as vizinhas no seu céu."
+      }
+    ]
+  },
+  "const-FE": {
+    "nome": "Constelação · Front-end",
+    "projeto": "a constelação Front-end",
+    "descricao": "Exercícios das estrelas de Front-end abertas pelo mapa.",
+    "icone": "🪐",
+    "oculta": true,
+    "estrelas": [
+      "css",
+      "acessibilidade"
+    ],
+    "jaAcesas": [],
+    "aulas": [
+      {
+        "titulo": "Estilos em texto CSS",
+        "skill": "css",
+        "ex": "css",
+        "texto": "CSS descreve o visual como pares propriedade: valor.",
+        "passos": [
+          "Aula: CSS descreve o visual como pares propriedade: valor.",
+          "Programação: resolva \"Estilos em texto CSS\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Front-end revela as vizinhas no seu céu."
+      },
+      {
+        "titulo": "Imagem com texto alternativo",
+        "skill": "acessibilidade",
+        "ex": "acessibilidade",
+        "texto": "Toda imagem precisa de texto alternativo para quem usa leitor de tela.",
+        "passos": [
+          "Aula: Toda imagem precisa de texto alternativo para quem usa leitor de tela.",
+          "Programação: resolva \"Imagem com texto alternativo\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Front-end revela as vizinhas no seu céu."
+      }
+    ]
+  },
+  "const-BE": {
+    "nome": "Constelação · Back-end",
+    "projeto": "a constelação Back-end",
+    "descricao": "Exercícios das estrelas de Back-end abertas pelo mapa.",
+    "icone": "🛰️",
+    "oculta": true,
+    "estrelas": [
+      "http",
+      "autenticacao",
+      "validacao"
+    ],
+    "jaAcesas": [],
+    "aulas": [
+      {
+        "titulo": "Classe do status HTTP",
+        "skill": "http",
+        "ex": "http",
+        "texto": "Todo pedido na web volta com um código de status que diz o que aconteceu.",
+        "passos": [
+          "Aula: Todo pedido na web volta com um código de status que diz o que aconteceu.",
+          "Programação: resolva \"Classe do status HTTP\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Back-end revela as vizinhas no seu céu."
+      },
+      {
+        "titulo": "Conferir login",
+        "skill": "autenticacao",
+        "ex": "autenticacao",
+        "texto": "Autenticar é provar quem você é: o servidor confere nome e senha.",
+        "passos": [
+          "Aula: Autenticar é provar quem você é: o servidor confere nome e senha.",
+          "Programação: resolva \"Conferir login\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Back-end revela as vizinhas no seu céu."
+      },
+      {
+        "titulo": "Validar e-mail",
+        "skill": "validacao",
+        "ex": "validacao",
+        "texto": "Nunca confie no que o usuário manda: valide antes de usar.",
+        "passos": [
+          "Aula: Nunca confie no que o usuário manda: valide antes de usar.",
+          "Programação: resolva \"Validar e-mail\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Back-end revela as vizinhas no seu céu."
+      }
+    ]
+  },
+  "const-DB": {
+    "nome": "Constelação · Banco de Dados",
+    "projeto": "a constelação Banco de Dados",
+    "descricao": "Exercícios das estrelas de Banco de Dados abertas pelo mapa.",
+    "icone": "🗄️",
+    "oculta": true,
+    "estrelas": [
+      "joins"
+    ],
+    "jaAcesas": [],
+    "aulas": [
+      {
+        "titulo": "JOIN de alunos e cursos",
+        "skill": "joins",
+        "ex": "joins",
+        "texto": "JOIN junta linhas de duas tabelas pela chave que elas compartilham.",
+        "passos": [
+          "Aula: JOIN junta linhas de duas tabelas pela chave que elas compartilham.",
+          "Programação: resolva \"JOIN de alunos e cursos\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Banco de Dados revela as vizinhas no seu céu."
+      }
+    ]
+  },
+  "const-DO": {
+    "nome": "Constelação · DevOps e Nuvem",
+    "projeto": "a constelação DevOps e Nuvem",
+    "descricao": "Exercícios das estrelas de DevOps e Nuvem abertas pelo mapa.",
+    "icone": "☁️",
+    "oculta": true,
+    "estrelas": [
+      "linux"
+    ],
+    "jaAcesas": [],
+    "aulas": [
+      {
+        "titulo": "Permissão chmod",
+        "skill": "linux",
+        "ex": "linux",
+        "texto": "No Linux, cada arquivo tem permissões de leitura (r), escrita (w) e execução (x).",
+        "passos": [
+          "Aula: No Linux, cada arquivo tem permissões de leitura (r), escrita (w) e execução (x).",
+          "Programação: resolva \"Permissão chmod\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em DevOps e Nuvem revela as vizinhas no seu céu."
+      }
+    ]
+  },
+  "const-SE": {
+    "nome": "Constelação · Segurança",
+    "projeto": "a constelação Segurança",
+    "descricao": "Exercícios das estrelas de Segurança abertas pelo mapa.",
+    "icone": "🛡️",
+    "oculta": true,
+    "estrelas": [
+      "cia"
+    ],
+    "jaAcesas": [],
+    "aulas": [
+      {
+        "titulo": "Qual pilar foi atingido?",
+        "skill": "cia",
+        "ex": "cia",
+        "texto": "Segurança se apoia em três pilares: confidencialidade, integridade e disponibilidade.",
+        "passos": [
+          "Aula: Segurança se apoia em três pilares: confidencialidade, integridade e disponibilidade.",
+          "Programação: resolva \"Qual pilar foi atingido?\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Segurança revela as vizinhas no seu céu."
+      }
+    ]
+  },
+  "const-EM": {
+    "nome": "Constelação · Embarcados e IoT",
+    "projeto": "a constelação Embarcados e IoT",
+    "descricao": "Exercícios das estrelas de Embarcados e IoT abertas pelo mapa.",
+    "icone": "🔌",
+    "oculta": true,
+    "estrelas": [
+      "eletronica"
+    ],
+    "jaAcesas": [],
+    "aulas": [
+      {
+        "titulo": "Corrente do LED (Lei de Ohm)",
+        "skill": "eletronica",
+        "ex": "eletronica",
+        "texto": "Lei de Ohm: corrente = tensão ÷ resistência.",
+        "passos": [
+          "Aula: Lei de Ohm: corrente = tensão ÷ resistência.",
+          "Programação: resolva \"Corrente do LED (Lei de Ohm)\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Embarcados e IoT revela as vizinhas no seu céu."
+      }
+    ]
+  },
+  "const-IA": {
+    "nome": "Constelação · Dados e IA",
+    "projeto": "a constelação Dados e IA",
+    "descricao": "Exercícios das estrelas de Dados e IA abertas pelo mapa.",
+    "icone": "🧠",
+    "oculta": true,
+    "estrelas": [
+      "numpy",
+      "estatistica",
+      "algebra"
+    ],
+    "jaAcesas": [],
+    "aulas": [
+      {
+        "titulo": "Soma de vetores",
+        "skill": "numpy",
+        "ex": "numpy",
+        "texto": "NumPy trabalha com vetores inteiros de uma vez: somar vetores é somar posição por posição.",
+        "passos": [
+          "Aula: NumPy trabalha com vetores inteiros de uma vez: somar vetores é somar posição por posição.",
+          "Programação: resolva \"Soma de vetores\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Dados e IA revela as vizinhas no seu céu."
+      },
+      {
+        "titulo": "Mediana",
+        "skill": "estatistica",
+        "ex": "estatistica",
+        "texto": "A mediana é o valor do meio da lista ordenada — resiste a valores extremos.",
+        "passos": [
+          "Aula: A mediana é o valor do meio da lista ordenada — resiste a valores extremos.",
+          "Programação: resolva \"Mediana\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Dados e IA revela as vizinhas no seu céu."
+      },
+      {
+        "titulo": "Produto escalar",
+        "skill": "algebra",
+        "ex": "algebra",
+        "texto": "O produto escalar multiplica posição por posição e soma tudo — base de quase todo modelo de IA.",
+        "passos": [
+          "Aula: O produto escalar multiplica posição por posição e soma tudo — base de quase todo modelo de IA.",
+          "Programação: resolva \"Produto escalar\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Dados e IA revela as vizinhas no seu céu."
+      }
+    ]
+  },
+  "const-BO": {
+    "nome": "Constelação · Bots e Automação",
+    "projeto": "a constelação Bots e Automação",
+    "descricao": "Exercícios das estrelas de Bots e Automação abertas pelo mapa.",
+    "icone": "🤖",
+    "oculta": true,
+    "estrelas": [
+      "automacao"
+    ],
+    "jaAcesas": [],
+    "aulas": [
+      {
+        "titulo": "Padronizar nomes de arquivos",
+        "skill": "automacao",
+        "ex": "automacao",
+        "texto": "Automação é pegar uma tarefa chata e repetitiva e deixar o código fazer.",
+        "passos": [
+          "Aula: Automação é pegar uma tarefa chata e repetitiva e deixar o código fazer.",
+          "Programação: resolva \"Padronizar nomes de arquivos\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Bots e Automação revela as vizinhas no seu céu."
+      }
+    ]
+  },
+  "const-JG": {
+    "nome": "Constelação · Jogos",
+    "projeto": "a constelação Jogos",
+    "descricao": "Exercícios das estrelas de Jogos abertas pelo mapa.",
+    "icone": "🎮",
+    "oculta": true,
+    "estrelas": [
+      "gameloop",
+      "gamedesign"
+    ],
+    "jaAcesas": [],
+    "aulas": [
+      {
+        "titulo": "Quadros até o game over",
+        "skill": "gameloop",
+        "ex": "gameloop",
+        "texto": "O game loop repete: ler entrada, atualizar o estado, desenhar. Aqui, só o \"atualizar\".",
+        "passos": [
+          "Aula: O game loop repete: ler entrada, atualizar o estado, desenhar. Aqui, só o \"atualizar\".",
+          "Programação: resolva \"Quadros até o game over\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Jogos revela as vizinhas no seu céu."
+      },
+      {
+        "titulo": "Nível pelo XP",
+        "skill": "gamedesign",
+        "ex": "gamedesign",
+        "texto": "Progressão é o que prende o jogador: XP vira nível.",
+        "passos": [
+          "Aula: Progressão é o que prende o jogador: XP vira nível.",
+          "Programação: resolva \"Nível pelo XP\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Jogos revela as vizinhas no seu céu."
+      }
+    ]
+  },
+  "const-MO": {
+    "nome": "Constelação · Mobile",
+    "projeto": "a constelação Mobile",
+    "descricao": "Exercícios das estrelas de Mobile abertas pelo mapa.",
+    "icone": "📱",
+    "oculta": true,
+    "estrelas": [
+      "mobile"
+    ],
+    "jaAcesas": [],
+    "aulas": [
+      {
+        "titulo": "Botões pequenos demais",
+        "skill": "mobile",
+        "ex": "mobile",
+        "texto": "No celular o dedo é grosso: botões precisam de pelo menos 44 px de lado.",
+        "passos": [
+          "Aula: No celular o dedo é grosso: botões precisam de pelo menos 44 px de lado.",
+          "Programação: resolva \"Botões pequenos demais\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Mobile revela as vizinhas no seu céu."
+      }
+    ]
+  },
+  "const-ES": {
+    "nome": "Constelação · Engenharia de Software",
+    "projeto": "a constelação Engenharia de Software",
+    "descricao": "Exercícios das estrelas de Engenharia de Software abertas pelo mapa.",
+    "icone": "🧱",
+    "oculta": true,
+    "estrelas": [
+      "codigolimpo",
+      "ageis",
+      "docs"
+    ],
+    "jaAcesas": [],
+    "aulas": [
+      {
+        "titulo": "snake_case para camelCase",
+        "skill": "codigolimpo",
+        "ex": "codigolimpo",
+        "texto": "Código limpo segue convenções de nome para qualquer pessoa ler rápido.",
+        "passos": [
+          "Aula: Código limpo segue convenções de nome para qualquer pessoa ler rápido.",
+          "Programação: resolva \"snake_case para camelCase\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Engenharia de Software revela as vizinhas no seu céu."
+      },
+      {
+        "titulo": "O que cabe na sprint",
+        "skill": "ageis",
+        "ex": "ageis",
+        "texto": "Em metodologias ágeis, a equipe só compromete o que cabe na capacidade da sprint.",
+        "passos": [
+          "Aula: Em metodologias ágeis, a equipe só compromete o que cabe na capacidade da sprint.",
+          "Programação: resolva \"O que cabe na sprint\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Engenharia de Software revela as vizinhas no seu céu."
+      },
+      {
+        "titulo": "Linha de documentação da função",
+        "skill": "docs",
+        "ex": "docs",
+        "texto": "Documentação boa mostra o nome da função e o que ela recebe.",
+        "passos": [
+          "Aula: Documentação boa mostra o nome da função e o que ela recebe.",
+          "Programação: resolva \"Linha de documentação da função\"",
+          "Programação com IA: peça uma revisão do seu código e explique cada linha"
+        ],
+        "why": "Cada estrela acesa em Engenharia de Software revela as vizinhas no seu céu."
+      }
+    ]
+  }
+}

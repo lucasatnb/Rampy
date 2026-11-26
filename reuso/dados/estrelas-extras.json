@@ -1,0 +1,1129 @@
+{
+  "exercicios": {
+    "logica": {
+      "titulo": "FizzBuzz do bot",
+      "enunciado": "Complete <code>solucao(n)</code>: devolva <code>\"FizzBuzz\"</code> se n divide por 3 e por 5, <code>\"Fizz\"</code> se só por 3, <code>\"Buzz\"</code> se só por 5. Nos outros casos, devolva o próprio n.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "Teste primeiro o caso mais específico (divisível por 3 e por 5).",
+      "starter": "function solucao(n) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(n) {\n  if (n % 15 === 0) return \"FizzBuzz\";\n  if (n % 3 === 0) return \"Fizz\";\n  if (n % 5 === 0) return \"Buzz\";\n  return n;\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"15 é FizzBuzz\", function () { var r = solucao.apply(null, [15]); return __eq(r, \"FizzBuzz\") ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"9 é Fizz\", function () { var r = solucao.apply(null, [9]); return __eq(r, \"Fizz\") ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"10 é Buzz\", function () { var r = solucao.apply(null, [10]); return __eq(r, \"Buzz\") ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"7 volta 7\", function () { var r = solucao.apply(null, [7]); return __eq(r, 7) ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "strings": {
+      "titulo": "Nome com maiúsculas",
+      "enunciado": "Complete <code>solucao(texto)</code> para devolver o texto com a primeira letra de cada palavra maiúscula e o resto minúsculo.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "split(\" \") separa as palavras; map muda cada uma; join(\" \") junta de volta.",
+      "starter": "function solucao(texto) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(texto) {\n  return texto.split(\" \").map(function (p) { return p ? p[0].toUpperCase() + p.slice(1).toLowerCase() : p; }).join(\" \");\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"ana maria\", function () { var r = solucao.apply(null, [\"ana maria\"]); return __eq(r, \"Ana Maria\") ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"LUCAS\", function () { var r = solucao.apply(null, [\"LUCAS\"]); return __eq(r, \"Lucas\") ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"texto vazio\", function () { var r = solucao.apply(null, [\"\"]); return __eq(r, \"\") ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "excecoes": {
+      "titulo": "Ler JSON sem quebrar",
+      "enunciado": "Complete <code>solucao(texto)</code> para devolver o objeto do JSON, ou <code>null</code> se o texto for inválido. Use <code>try/catch</code>.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "JSON.parse lança erro quando o texto é inválido: capture com catch.",
+      "starter": "function solucao(texto) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(texto) {\n  try { return JSON.parse(texto); } catch (e) { return null; }\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"JSON válido\", function () { var r = solucao.apply(null, [\"{\\\"a\\\":1}\"]); return __eq(r, {\"a\":1}) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"JSON quebrado\", function () { var r = solucao.apply(null, [\"{quebrado\"]); return __eq(r, null) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"texto vazio\", function () { var r = solucao.apply(null, [\"\"]); return __eq(r, null) ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "algoritmos": {
+      "titulo": "Maior da lista (sem Math.max)",
+      "enunciado": "Complete <code>solucao(lista)</code> para devolver o maior número da lista, ou <code>null</code> se ela estiver vazia. Não use <code>Math.max</code>.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "Comece com o primeiro item como \"maior\" e compare com os demais.",
+      "starter": "function solucao(lista) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(lista) {\n  if (!lista.length) return null;\n  var maior = lista[0];\n  for (var i = 1; i < lista.length; i++) { if (lista[i] > maior) maior = lista[i]; }\n  return maior;\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"maior de [3,9,2]\", function () { var r = solucao.apply(null, [[3,9,2]]); return __eq(r, 9) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"só negativos\", function () { var r = solucao.apply(null, [[-5,-1,-8]]); return __eq(r, -1) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"lista vazia\", function () { var r = solucao.apply(null, [[]]); return __eq(r, null) ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "recursao": {
+      "titulo": "Fatorial",
+      "enunciado": "Complete <code>solucao(n)</code> para devolver o fatorial de n (5! = 5·4·3·2·1) usando <b>recursão</b>.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "Caso base: n <= 1 devolve 1. Senão: n * solucao(n - 1).",
+      "starter": "function solucao(n) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(n) {\n  if (n <= 1) return 1;\n  return n * solucao(n - 1);\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"5! = 120\", function () { var r = solucao.apply(null, [5]); return __eq(r, 120) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"0! = 1\", function () { var r = solucao.apply(null, [0]); return __eq(r, 1) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"1! = 1\", function () { var r = solucao.apply(null, [1]); return __eq(r, 1) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"6! = 720\", function () { var r = solucao.apply(null, [6]); return __eq(r, 720) ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "css": {
+      "titulo": "Estilos em texto CSS",
+      "enunciado": "Complete <code>solucao(estilos)</code> para transformar um objeto como <code>{color: \"red\"}</code> em texto CSS: <code>\"color: red;\"</code>. Com várias propriedades, separe por um espaço.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "Object.keys(obj) lista as propriedades; map monta cada \"chave: valor;\".",
+      "starter": "function solucao(estilos) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(estilos) {\n  return Object.keys(estilos).map(function (k) { return k + \": \" + estilos[k] + \";\"; }).join(\" \");\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"uma propriedade\", function () { var r = solucao.apply(null, [{\"color\":\"red\"}]); return __eq(r, \"color: red;\") ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"duas propriedades\", function () { var r = solucao.apply(null, [{\"color\":\"red\",\"font-size\":\"16px\"}]); return __eq(r, \"color: red; font-size: 16px;\") ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"objeto vazio\", function () { var r = solucao.apply(null, [{}]); return __eq(r, \"\") ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "acessibilidade": {
+      "titulo": "Imagem com texto alternativo",
+      "enunciado": "Complete <code>solucao(src, alt)</code> para devolver <code>&lt;img src=\"...\" alt=\"...\"&gt;</code>. Se o <code>alt</code> estiver vazio, devolva <code>null</code> (imagem sem descrição não vale).",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "Cheque o alt antes de montar o texto da tag.",
+      "starter": "function solucao(src, alt) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(src, alt) {\n  if (!alt) return null;\n  return '<img src=\"' + src + '\" alt=\"' + alt + '\">';\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"imagem com alt\", function () { var r = solucao.apply(null, [\"gato.png\",\"Gato dormindo\"]); return __eq(r, \"<img src=\\\"gato.png\\\" alt=\\\"Gato dormindo\\\">\") ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"sem alt devolve null\", function () { var r = solucao.apply(null, [\"gato.png\",\"\"]); return __eq(r, null) ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "http": {
+      "titulo": "Classe do status HTTP",
+      "enunciado": "Complete <code>solucao(status)</code>: 200–299 → <code>\"sucesso\"</code>, 300–399 → <code>\"redirecionamento\"</code>, 400–499 → <code>\"erro do cliente\"</code>, 500 ou mais → <code>\"erro do servidor\"</code>.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "Comece pelo maior intervalo e desça com if.",
+      "starter": "function solucao(status) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(status) {\n  if (status >= 500) return \"erro do servidor\";\n  if (status >= 400) return \"erro do cliente\";\n  if (status >= 300) return \"redirecionamento\";\n  return \"sucesso\";\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"200\", function () { var r = solucao.apply(null, [200]); return __eq(r, \"sucesso\") ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"301\", function () { var r = solucao.apply(null, [301]); return __eq(r, \"redirecionamento\") ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"404\", function () { var r = solucao.apply(null, [404]); return __eq(r, \"erro do cliente\") ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"503\", function () { var r = solucao.apply(null, [503]); return __eq(r, \"erro do servidor\") ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "autenticacao": {
+      "titulo": "Conferir login",
+      "enunciado": "Complete <code>solucao(usuarios, nome, senha)</code> para devolver <code>true</code> só se existir um usuário com esse nome <b>e</b> essa senha. (Aqui a senha está em texto puro só para treinar. Em Senhas e hash você aprende a nunca fazer isso de verdade.)",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "some(...) devolve true se algum item cumprir a condição.",
+      "starter": "function solucao(usuarios, nome, senha) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(usuarios, nome, senha) {\n  return usuarios.some(function (u) { return u.nome === nome && u.senha === senha; });\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"login certo\", function () { var r = solucao.apply(null, [[{\"nome\":\"ana\",\"senha\":\"123\"},{\"nome\":\"bia\",\"senha\":\"abc\"}],\"ana\",\"123\"]); return __eq(r, true) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"senha errada\", function () { var r = solucao.apply(null, [[{\"nome\":\"ana\",\"senha\":\"123\"}],\"ana\",\"999\"]); return __eq(r, false) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"usuário inexistente\", function () { var r = solucao.apply(null, [[{\"nome\":\"ana\",\"senha\":\"123\"}],\"caio\",\"123\"]); return __eq(r, false) ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "validacao": {
+      "titulo": "Validar e-mail",
+      "enunciado": "Complete <code>solucao(email)</code> para devolver <code>true</code> se o texto tem algo antes do <code>@</code>, algo depois e um ponto no domínio, sem espaços.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "Uma expressão regular resolve; ou confira @ e ponto com indexOf.",
+      "starter": "function solucao(email) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(email) {\n  return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"e-mail válido\", function () { var r = solucao.apply(null, [\"ana@mail.com\"]); return __eq(r, true) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"sem ponto no domínio\", function () { var r = solucao.apply(null, [\"ana@mail\"]); return __eq(r, false) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"sem @\", function () { var r = solucao.apply(null, [\"ana mail.com\"]); return __eq(r, false) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"vazio\", function () { var r = solucao.apply(null, [\"\"]); return __eq(r, false) ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "joins": {
+      "titulo": "JOIN de alunos e cursos",
+      "enunciado": "Complete <code>solucao(alunos, cursos)</code>. Cada aluno tem <code>cursoId</code>. Devolva uma lista de <code>{aluno, curso}</code> (nomes) só dos alunos cujo curso existe — como um INNER JOIN.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "Para cada aluno, procure o curso com find; só adicione se achar.",
+      "starter": "function solucao(alunos, cursos) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(alunos, cursos) {\n  var saida = [];\n  alunos.forEach(function (a) {\n    var c = cursos.find(function (x) { return x.id === a.cursoId; });\n    if (c) saida.push({ aluno: a.nome, curso: c.nome });\n  });\n  return saida;\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"junta quem tem curso\", function () { var r = solucao.apply(null, [[{\"nome\":\"Ana\",\"cursoId\":1},{\"nome\":\"Bia\",\"cursoId\":2},{\"nome\":\"Caio\",\"cursoId\":9}],[{\"id\":1,\"nome\":\"SQL\"},{\"id\":2,\"nome\":\"Git\"}]]); return __eq(r, [{\"aluno\":\"Ana\",\"curso\":\"SQL\"},{\"aluno\":\"Bia\",\"curso\":\"Git\"}]) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"sem alunos\", function () { var r = solucao.apply(null, [[],[{\"id\":1,\"nome\":\"SQL\"}]]); return __eq(r, []) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"curso inexistente\", function () { var r = solucao.apply(null, [[{\"nome\":\"Caio\",\"cursoId\":9}],[{\"id\":1,\"nome\":\"SQL\"}]]); return __eq(r, []) ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "linux": {
+      "titulo": "Permissão chmod",
+      "enunciado": "Complete <code>solucao(modo)</code> para converter o modo numérico em texto: <code>\"755\"</code> vira <code>\"rwxr-xr-x\"</code>. Cada dígito é 4 (r) + 2 (w) + 1 (x), e uma permissão ausente vira <code>-</code>.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "Cada dígito (0–7) é um índice numa tabela de 8 combinações.",
+      "starter": "function solucao(modo) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(modo) {\n  var letras = [\"---\", \"--x\", \"-w-\", \"-wx\", \"r--\", \"r-x\", \"rw-\", \"rwx\"];\n  return modo.split(\"\").map(function (d) { return letras[Number(d)]; }).join(\"\");\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"755\", function () { var r = solucao.apply(null, [\"755\"]); return __eq(r, \"rwxr-xr-x\") ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"644\", function () { var r = solucao.apply(null, [\"644\"]); return __eq(r, \"rw-r--r--\") ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"700\", function () { var r = solucao.apply(null, [\"700\"]); return __eq(r, \"rwx------\") ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "cia": {
+      "titulo": "Qual pilar foi atingido?",
+      "enunciado": "Complete <code>solucao(evento)</code>: se o texto tiver <code>vazou</code> devolva <code>\"confidencialidade\"</code>; se tiver <code>alterad</code> (alterado/alterada), <code>\"integridade\"</code>; se tiver <code>fora do ar</code>, <code>\"disponibilidade\"</code>. Senão, <code>null</code>.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "indexOf devolve -1 quando não acha o trecho.",
+      "starter": "function solucao(evento) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(evento) {\n  var t = evento.toLowerCase();\n  if (t.indexOf(\"vazou\") >= 0) return \"confidencialidade\";\n  if (t.indexOf(\"alterad\") >= 0) return \"integridade\";\n  if (t.indexOf(\"fora do ar\") >= 0) return \"disponibilidade\";\n  return null;\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"vazamento\", function () { var r = solucao.apply(null, [\"A lista de clientes vazou\"]); return __eq(r, \"confidencialidade\") ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"alteração\", function () { var r = solucao.apply(null, [\"O saldo foi alterado por um invasor\"]); return __eq(r, \"integridade\") ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"indisponível\", function () { var r = solucao.apply(null, [\"O site ficou fora do ar\"]); return __eq(r, \"disponibilidade\") ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"dia normal\", function () { var r = solucao.apply(null, [\"Dia normal\"]); return __eq(r, null) ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "eletronica": {
+      "titulo": "Corrente do LED (Lei de Ohm)",
+      "enunciado": "Complete <code>solucao(tensao, resistencia)</code> para devolver a corrente em amperes (I = V / R). Com resistência 0, devolva <code>null</code>.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "Divisão por zero não existe: trate esse caso antes.",
+      "starter": "function solucao(tensao, resistencia) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(tensao, resistencia) {\n  if (resistencia === 0) return null;\n  return tensao / resistencia;\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"5 V e 1000 Ω\", function () { var r = solucao.apply(null, [5,1000]); return __eq(r, 0.005) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"9 V e 3 Ω\", function () { var r = solucao.apply(null, [9,3]); return __eq(r, 3) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"resistência zero\", function () { var r = solucao.apply(null, [5,0]); return __eq(r, null) ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "numpy": {
+      "titulo": "Soma de vetores",
+      "enunciado": "Complete <code>solucao(a, b)</code> para devolver um vetor novo em que cada posição é a soma das posições de a e b.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "map te dá o valor e o índice: use o índice para pegar o item de b.",
+      "starter": "function solucao(a, b) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(a, b) {\n  return a.map(function (x, i) { return x + b[i]; });\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"[1,2,3] + [4,5,6]\", function () { var r = solucao.apply(null, [[1,2,3],[4,5,6]]); return __eq(r, [5,7,9]) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"um zero\", function () { var r = solucao.apply(null, [[0],[0]]); return __eq(r, [0]) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"vetores vazios\", function () { var r = solucao.apply(null, [[],[]]); return __eq(r, []) ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "estatistica": {
+      "titulo": "Mediana",
+      "enunciado": "Complete <code>solucao(lista)</code> para devolver a mediana (se o tamanho for par, a média dos dois do meio). Lista vazia devolve <code>null</code>. Não altere a lista original.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "sort sem função compara como texto: use (a, b) => a - b.",
+      "starter": "function solucao(lista) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(lista) {\n  if (!lista.length) return null;\n  var o = lista.slice().sort(function (a, b) { return a - b; });\n  var m = Math.floor(o.length / 2);\n  return o.length % 2 ? o[m] : (o[m - 1] + o[m]) / 2;\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"tamanho ímpar\", function () { var r = solucao.apply(null, [[3,1,2]]); return __eq(r, 2) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"tamanho par\", function () { var r = solucao.apply(null, [[4,1,3,2]]); return __eq(r, 2.5) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"lista vazia\", function () { var r = solucao.apply(null, [[]]); return __eq(r, null) ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "algebra": {
+      "titulo": "Produto escalar",
+      "enunciado": "Complete <code>solucao(a, b)</code> para devolver o produto escalar de dois vetores do mesmo tamanho: a[0]·b[0] + a[1]·b[1] + …",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "Acumule em uma variável dentro de um laço.",
+      "starter": "function solucao(a, b) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(a, b) {\n  var soma = 0;\n  for (var i = 0; i < a.length; i++) soma += a[i] * b[i];\n  return soma;\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"[1,2,3]·[4,5,6]\", function () { var r = solucao.apply(null, [[1,2,3],[4,5,6]]); return __eq(r, 32) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"zeros\", function () { var r = solucao.apply(null, [[0,0],[5,5]]); return __eq(r, 0) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"com negativo\", function () { var r = solucao.apply(null, [[-1,2],[3,4]]); return __eq(r, 5) ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "automacao": {
+      "titulo": "Padronizar nomes de arquivos",
+      "enunciado": "Complete <code>solucao(nomes)</code> para devolver a lista com cada nome em minúsculas, sem espaços nas pontas e com os espaços do meio trocados por <code>_</code>.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "trim, toLowerCase e replace com /\\s+/g resolvem.",
+      "starter": "function solucao(nomes) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(nomes) {\n  return nomes.map(function (n) { return n.trim().toLowerCase().replace(/\\s+/g, \"_\"); });\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"um arquivo\", function () { var r = solucao.apply(null, [[\"Foto Final.PNG\"]]); return __eq(r, [\"foto_final.png\"]) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"espaços nas pontas e repetidos\", function () { var r = solucao.apply(null, [[\" Notas  Aula.txt \"]]); return __eq(r, [\"notas_aula.txt\"]) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"lista vazia\", function () { var r = solucao.apply(null, [[]]); return __eq(r, []) ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "gameloop": {
+      "titulo": "Quadros até o game over",
+      "enunciado": "Complete <code>solucao(vidas, danoPorQuadro)</code>: a cada quadro o jogador perde <code>danoPorQuadro</code> de vida. Devolva quantos quadros passam até as vidas chegarem a 0 ou menos. Se o dano for 0 ou negativo, devolva <code>null</code>.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "Um while que diminui a vida e conta os quadros.",
+      "starter": "function solucao(vidas, danoPorQuadro) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(vidas, danoPorQuadro) {\n  if (danoPorQuadro <= 0) return null;\n  var quadros = 0;\n  while (vidas > 0) {\n    vidas -= danoPorQuadro;\n    quadros++;\n  }\n  return quadros;\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"10 de vida, 3 por quadro\", function () { var r = solucao.apply(null, [10,3]); return __eq(r, 4) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"9 de vida, 3 por quadro\", function () { var r = solucao.apply(null, [9,3]); return __eq(r, 3) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"já começa sem vida\", function () { var r = solucao.apply(null, [0,5]); return __eq(r, 0) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"sem dano devolve null\", function () { var r = solucao.apply(null, [5,0]); return __eq(r, null) ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "gamedesign": {
+      "titulo": "Nível pelo XP",
+      "enunciado": "Complete <code>solucao(xp, xpPorNivel)</code> para devolver o nível do jogador. Com 0 de XP ele está no nível 1, e sobe um nível a cada <code>xpPorNivel</code>.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "Divisão arredondada para baixo, mais 1.",
+      "starter": "function solucao(xp, xpPorNivel) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(xp, xpPorNivel) {\n  return Math.floor(xp / xpPorNivel) + 1;\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"0 de XP\", function () { var r = solucao.apply(null, [0,100]); return __eq(r, 1) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"99 de XP\", function () { var r = solucao.apply(null, [99,100]); return __eq(r, 1) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"100 de XP\", function () { var r = solucao.apply(null, [100,100]); return __eq(r, 2) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"250 de XP\", function () { var r = solucao.apply(null, [250,100]); return __eq(r, 3) ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "mobile": {
+      "titulo": "Botões pequenos demais",
+      "enunciado": "Complete <code>solucao(botoes)</code>. Cada botão é <code>{nome, lado}</code>. Devolva só os <b>nomes</b> dos botões com lado menor que 44.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "filter escolhe os botões; map pega só os nomes.",
+      "starter": "function solucao(botoes) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(botoes) {\n  return botoes.filter(function (b) { return b.lado < 44; }).map(function (b) { return b.nome; });\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"um botão pequeno\", function () { var r = solucao.apply(null, [[{\"nome\":\"ok\",\"lado\":48},{\"nome\":\"x\",\"lado\":30},{\"nome\":\"menu\",\"lado\":44}]]); return __eq(r, [\"x\"]) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"lista vazia\", function () { var r = solucao.apply(null, [[]]); return __eq(r, []) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"dois pequenos\", function () { var r = solucao.apply(null, [[{\"nome\":\"a\",\"lado\":20},{\"nome\":\"b\",\"lado\":43}]]); return __eq(r, [\"a\",\"b\"]) ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "codigolimpo": {
+      "titulo": "snake_case para camelCase",
+      "enunciado": "Complete <code>solucao(nome)</code> para converter <code>total_de_itens</code> em <code>totalDeItens</code>: a primeira parte fica igual e cada parte seguinte começa com maiúscula.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "split(\"_\") separa; a primeira fica, as outras ganham maiúscula.",
+      "starter": "function solucao(nome) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(nome) {\n  return nome.split(\"_\").map(function (p, i) { return i === 0 ? p : p.charAt(0).toUpperCase() + p.slice(1); }).join(\"\");\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"total_de_itens\", function () { var r = solucao.apply(null, [\"total_de_itens\"]); return __eq(r, \"totalDeItens\") ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"uma palavra só\", function () { var r = solucao.apply(null, [\"nome\"]); return __eq(r, \"nome\") ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"preco_final\", function () { var r = solucao.apply(null, [\"preco_final\"]); return __eq(r, \"precoFinal\") ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "ageis": {
+      "titulo": "O que cabe na sprint",
+      "enunciado": "Complete <code>solucao(tarefas, capacidade)</code>. Cada tarefa é <code>{nome, pontos}</code>, já em ordem de prioridade. Pegue as tarefas na ordem até a próxima não caber e devolva os <b>nomes</b> das escolhidas.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "Some os pontos e pare (break) quando a próxima estourar a capacidade.",
+      "starter": "function solucao(tarefas, capacidade) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(tarefas, capacidade) {\n  var usados = 0;\n  var feitas = [];\n  for (var i = 0; i < tarefas.length; i++) {\n    if (usados + tarefas[i].pontos > capacidade) break;\n    usados += tarefas[i].pontos;\n    feitas.push(tarefas[i].nome);\n  }\n  return feitas;\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"cabem duas\", function () { var r = solucao.apply(null, [[{\"nome\":\"login\",\"pontos\":5},{\"nome\":\"perfil\",\"pontos\":3},{\"nome\":\"chat\",\"pontos\":8}],10]); return __eq(r, [\"login\",\"perfil\"]) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"cabem todas\", function () { var r = solucao.apply(null, [[{\"nome\":\"login\",\"pontos\":5},{\"nome\":\"perfil\",\"pontos\":3},{\"nome\":\"chat\",\"pontos\":8}],20]); return __eq(r, [\"login\",\"perfil\",\"chat\"]) ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"não cabe nenhuma\", function () { var r = solucao.apply(null, [[{\"nome\":\"login\",\"pontos\":5}],2]); return __eq(r, []) ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    },
+    "docs": {
+      "titulo": "Linha de documentação da função",
+      "enunciado": "Complete <code>solucao(nome, params)</code> para devolver um título em Markdown: <code>\"### soma(a, b)\"</code>. Os parâmetros ficam separados por vírgula e espaço.",
+      "reqs": [
+        "Faça todos os testes passarem",
+        "Devolva o resultado com return"
+      ],
+      "dica": "join(\", \") junta a lista de parâmetros.",
+      "starter": "function solucao(nome, params) {\n  // escreva aqui\n\n}\n",
+      "solucao": "function solucao(nome, params) {\n  return \"### \" + nome + \"(\" + params.join(\", \") + \")\";\n}\n",
+      "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nfunction __eq(a, e) {\n    if (e === null || typeof e !== 'object') return typeof e === 'number' ? (typeof a === 'number' && Math.abs(a - e) < 1e-9) : a === e;\n    if (Array.isArray(e)) return Array.isArray(a) && a.length === e.length && e.every(function (x, i) { return __eq(a[i], x); });\n    if (!a || typeof a !== 'object' || Array.isArray(a)) return false;\n    const ks = Object.keys(e);\n    return Object.keys(a).length === ks.length && ks.every(function (k) { return __eq(a[k], e[k]); });\n  }\ncheck(\"soma(a, b)\", function () { var r = solucao.apply(null, [\"soma\",[\"a\",\"b\"]]); return __eq(r, \"### soma(a, b)\") ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"sem parâmetros\", function () { var r = solucao.apply(null, [\"ola\",[]]); return __eq(r, \"### ola()\") ? true : \"recebeu \" + JSON.stringify(r); });\ncheck(\"três parâmetros\", function () { var r = solucao.apply(null, [\"area\",[\"l\",\"a\",\"p\"]]); return __eq(r, \"### area(l, a, p)\") ? true : \"recebeu \" + JSON.stringify(r); });\nreturn out;"
+    }
+  },
+  "casos": {
+    "logica": [
+      [
+        "15 é FizzBuzz",
+        [
+          15
+        ],
+        "FizzBuzz"
+      ],
+      [
+        "9 é Fizz",
+        [
+          9
+        ],
+        "Fizz"
+      ],
+      [
+        "10 é Buzz",
+        [
+          10
+        ],
+        "Buzz"
+      ],
+      [
+        "7 volta 7",
+        [
+          7
+        ],
+        7
+      ]
+    ],
+    "strings": [
+      [
+        "ana maria",
+        [
+          "ana maria"
+        ],
+        "Ana Maria"
+      ],
+      [
+        "LUCAS",
+        [
+          "LUCAS"
+        ],
+        "Lucas"
+      ],
+      [
+        "texto vazio",
+        [
+          ""
+        ],
+        ""
+      ]
+    ],
+    "excecoes": [
+      [
+        "JSON válido",
+        [
+          "{\"a\":1}"
+        ],
+        {
+          "a": 1
+        }
+      ],
+      [
+        "JSON quebrado",
+        [
+          "{quebrado"
+        ],
+        null
+      ],
+      [
+        "texto vazio",
+        [
+          ""
+        ],
+        null
+      ]
+    ],
+    "algoritmos": [
+      [
+        "maior de [3,9,2]",
+        [
+          [
+            3,
+            9,
+            2
+          ]
+        ],
+        9
+      ],
+      [
+        "só negativos",
+        [
+          [
+            -5,
+            -1,
+            -8
+          ]
+        ],
+        -1
+      ],
+      [
+        "lista vazia",
+        [
+          []
+        ],
+        null
+      ]
+    ],
+    "recursao": [
+      [
+        "5! = 120",
+        [
+          5
+        ],
+        120
+      ],
+      [
+        "0! = 1",
+        [
+          0
+        ],
+        1
+      ],
+      [
+        "1! = 1",
+        [
+          1
+        ],
+        1
+      ],
+      [
+        "6! = 720",
+        [
+          6
+        ],
+        720
+      ]
+    ],
+    "css": [
+      [
+        "uma propriedade",
+        [
+          {
+            "color": "red"
+          }
+        ],
+        "color: red;"
+      ],
+      [
+        "duas propriedades",
+        [
+          {
+            "color": "red",
+            "font-size": "16px"
+          }
+        ],
+        "color: red; font-size: 16px;"
+      ],
+      [
+        "objeto vazio",
+        [
+          {}
+        ],
+        ""
+      ]
+    ],
+    "acessibilidade": [
+      [
+        "imagem com alt",
+        [
+          "gato.png",
+          "Gato dormindo"
+        ],
+        "<img src=\"gato.png\" alt=\"Gato dormindo\">"
+      ],
+      [
+        "sem alt devolve null",
+        [
+          "gato.png",
+          ""
+        ],
+        null
+      ]
+    ],
+    "http": [
+      [
+        "200",
+        [
+          200
+        ],
+        "sucesso"
+      ],
+      [
+        "301",
+        [
+          301
+        ],
+        "redirecionamento"
+      ],
+      [
+        "404",
+        [
+          404
+        ],
+        "erro do cliente"
+      ],
+      [
+        "503",
+        [
+          503
+        ],
+        "erro do servidor"
+      ]
+    ],
+    "autenticacao": [
+      [
+        "login certo",
+        [
+          [
+            {
+              "nome": "ana",
+              "senha": "123"
+            },
+            {
+              "nome": "bia",
+              "senha": "abc"
+            }
+          ],
+          "ana",
+          "123"
+        ],
+        true
+      ],
+      [
+        "senha errada",
+        [
+          [
+            {
+              "nome": "ana",
+              "senha": "123"
+            }
+          ],
+          "ana",
+          "999"
+        ],
+        false
+      ],
+      [
+        "usuário inexistente",
+        [
+          [
+            {
+              "nome": "ana",
+              "senha": "123"
+            }
+          ],
+          "caio",
+          "123"
+        ],
+        false
+      ]
+    ],
+    "validacao": [
+      [
+        "e-mail válido",
+        [
+          "ana@mail.com"
+        ],
+        true
+      ],
+      [
+        "sem ponto no domínio",
+        [
+          "ana@mail"
+        ],
+        false
+      ],
+      [
+        "sem @",
+        [
+          "ana mail.com"
+        ],
+        false
+      ],
+      [
+        "vazio",
+        [
+          ""
+        ],
+        false
+      ]
+    ],
+    "joins": [
+      [
+        "junta quem tem curso",
+        [
+          [
+            {
+              "nome": "Ana",
+              "cursoId": 1
+            },
+            {
+              "nome": "Bia",
+              "cursoId": 2
+            },
+            {
+              "nome": "Caio",
+              "cursoId": 9
+            }
+          ],
+          [
+            {
+              "id": 1,
+              "nome": "SQL"
+            },
+            {
+              "id": 2,
+              "nome": "Git"
+            }
+          ]
+        ],
+        [
+          {
+            "aluno": "Ana",
+            "curso": "SQL"
+          },
+          {
+            "aluno": "Bia",
+            "curso": "Git"
+          }
+        ]
+      ],
+      [
+        "sem alunos",
+        [
+          [],
+          [
+            {
+              "id": 1,
+              "nome": "SQL"
+            }
+          ]
+        ],
+        []
+      ],
+      [
+        "curso inexistente",
+        [
+          [
+            {
+              "nome": "Caio",
+              "cursoId": 9
+            }
+          ],
+          [
+            {
+              "id": 1,
+              "nome": "SQL"
+            }
+          ]
+        ],
+        []
+      ]
+    ],
+    "linux": [
+      [
+        "755",
+        [
+          "755"
+        ],
+        "rwxr-xr-x"
+      ],
+      [
+        "644",
+        [
+          "644"
+        ],
+        "rw-r--r--"
+      ],
+      [
+        "700",
+        [
+          "700"
+        ],
+        "rwx------"
+      ]
+    ],
+    "cia": [
+      [
+        "vazamento",
+        [
+          "A lista de clientes vazou"
+        ],
+        "confidencialidade"
+      ],
+      [
+        "alteração",
+        [
+          "O saldo foi alterado por um invasor"
+        ],
+        "integridade"
+      ],
+      [
+        "indisponível",
+        [
+          "O site ficou fora do ar"
+        ],
+        "disponibilidade"
+      ],
+      [
+        "dia normal",
+        [
+          "Dia normal"
+        ],
+        null
+      ]
+    ],
+    "eletronica": [
+      [
+        "5 V e 1000 Ω",
+        [
+          5,
+          1000
+        ],
+        0.005
+      ],
+      [
+        "9 V e 3 Ω",
+        [
+          9,
+          3
+        ],
+        3
+      ],
+      [
+        "resistência zero",
+        [
+          5,
+          0
+        ],
+        null
+      ]
+    ],
+    "numpy": [
+      [
+        "[1,2,3] + [4,5,6]",
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ]
+        ],
+        [
+          5,
+          7,
+          9
+        ]
+      ],
+      [
+        "um zero",
+        [
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        [
+          0
+        ]
+      ],
+      [
+        "vetores vazios",
+        [
+          [],
+          []
+        ],
+        []
+      ]
+    ],
+    "estatistica": [
+      [
+        "tamanho ímpar",
+        [
+          [
+            3,
+            1,
+            2
+          ]
+        ],
+        2
+      ],
+      [
+        "tamanho par",
+        [
+          [
+            4,
+            1,
+            3,
+            2
+          ]
+        ],
+        2.5
+      ],
+      [
+        "lista vazia",
+        [
+          []
+        ],
+        null
+      ]
+    ],
+    "algebra": [
+      [
+        "[1,2,3]·[4,5,6]",
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ]
+        ],
+        32
+      ],
+      [
+        "zeros",
+        [
+          [
+            0,
+            0
+          ],
+          [
+            5,
+            5
+          ]
+        ],
+        0
+      ],
+      [
+        "com negativo",
+        [
+          [
+            -1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        5
+      ]
+    ],
+    "automacao": [
+      [
+        "um arquivo",
+        [
+          [
+            "Foto Final.PNG"
+          ]
+        ],
+        [
+          "foto_final.png"
+        ]
+      ],
+      [
+        "espaços nas pontas e repetidos",
+        [
+          [
+            " Notas  Aula.txt "
+          ]
+        ],
+        [
+          "notas_aula.txt"
+        ]
+      ],
+      [
+        "lista vazia",
+        [
+          []
+        ],
+        []
+      ]
+    ],
+    "gameloop": [
+      [
+        "10 de vida, 3 por quadro",
+        [
+          10,
+          3
+        ],
+        4
+      ],
+      [
+        "9 de vida, 3 por quadro",
+        [
+          9,
+          3
+        ],
+        3
+      ],
+      [
+        "já começa sem vida",
+        [
+          0,
+          5
+        ],
+        0
+      ],
+      [
+        "sem dano devolve null",
+        [
+          5,
+          0
+        ],
+        null
+      ]
+    ],
+    "gamedesign": [
+      [
+        "0 de XP",
+        [
+          0,
+          100
+        ],
+        1
+      ],
+      [
+        "99 de XP",
+        [
+          99,
+          100
+        ],
+        1
+      ],
+      [
+        "100 de XP",
+        [
+          100,
+          100
+        ],
+        2
+      ],
+      [
+        "250 de XP",
+        [
+          250,
+          100
+        ],
+        3
+      ]
+    ],
+    "mobile": [
+      [
+        "um botão pequeno",
+        [
+          [
+            {
+              "nome": "ok",
+              "lado": 48
+            },
+            {
+              "nome": "x",
+              "lado": 30
+            },
+            {
+              "nome": "menu",
+              "lado": 44
+            }
+          ]
+        ],
+        [
+          "x"
+        ]
+      ],
+      [
+        "lista vazia",
+        [
+          []
+        ],
+        []
+      ],
+      [
+        "dois pequenos",
+        [
+          [
+            {
+              "nome": "a",
+              "lado": 20
+            },
+            {
+              "nome": "b",
+              "lado": 43
+            }
+          ]
+        ],
+        [
+          "a",
+          "b"
+        ]
+      ]
+    ],
+    "codigolimpo": [
+      [
+        "total_de_itens",
+        [
+          "total_de_itens"
+        ],
+        "totalDeItens"
+      ],
+      [
+        "uma palavra só",
+        [
+          "nome"
+        ],
+        "nome"
+      ],
+      [
+        "preco_final",
+        [
+          "preco_final"
+        ],
+        "precoFinal"
+      ]
+    ],
+    "ageis": [
+      [
+        "cabem duas",
+        [
+          [
+            {
+              "nome": "login",
+              "pontos": 5
+            },
+            {
+              "nome": "perfil",
+              "pontos": 3
+            },
+            {
+              "nome": "chat",
+              "pontos": 8
+            }
+          ],
+          10
+        ],
+        [
+          "login",
+          "perfil"
+        ]
+      ],
+      [
+        "cabem todas",
+        [
+          [
+            {
+              "nome": "login",
+              "pontos": 5
+            },
+            {
+              "nome": "perfil",
+              "pontos": 3
+            },
+            {
+              "nome": "chat",
+              "pontos": 8
+            }
+          ],
+          20
+        ],
+        [
+          "login",
+          "perfil",
+          "chat"
+        ]
+      ],
+      [
+        "não cabe nenhuma",
+        [
+          [
+            {
+              "nome": "login",
+              "pontos": 5
+            }
+          ],
+          2
+        ],
+        []
+      ]
+    ],
+    "docs": [
+      [
+        "soma(a, b)",
+        [
+          "soma",
+          [
+            "a",
+            "b"
+          ]
+        ],
+        "### soma(a, b)"
+      ],
+      [
+        "sem parâmetros",
+        [
+          "ola",
+          []
+        ],
+        "### ola()"
+      ],
+      [
+        "três parâmetros",
+        [
+          "area",
+          [
+            "l",
+            "a",
+            "p"
+          ]
+        ],
+        "### area(l, a, p)"
+      ]
+    ]
+  }
+}

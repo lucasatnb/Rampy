@@ -1,0 +1,50 @@
+{
+  "FU": {
+    "nome": "Fundamentos",
+    "cor": "#ffd666"
+  },
+  "FE": {
+    "nome": "Front-end",
+    "cor": "#78c8ff"
+  },
+  "MO": {
+    "nome": "Mobile",
+    "cor": "#ff82ff"
+  },
+  "BE": {
+    "nome": "Back-end",
+    "cor": "#ff8c78"
+  },
+  "DB": {
+    "nome": "Banco de Dados",
+    "cor": "#6ee6c8"
+  },
+  "DO": {
+    "nome": "DevOps e Nuvem",
+    "cor": "#ffaa50"
+  },
+  "SE": {
+    "nome": "Segurança",
+    "cor": "#ff78aa"
+  },
+  "EM": {
+    "nome": "Embarcados e IoT",
+    "cor": "#d7ff78"
+  },
+  "IA": {
+    "nome": "Dados e IA",
+    "cor": "#be96ff"
+  },
+  "BO": {
+    "nome": "Bots e Automação",
+    "cor": "#ffcda0"
+  },
+  "JG": {
+    "nome": "Jogos",
+    "cor": "#8c96ff"
+  },
+  "ES": {
+    "nome": "Engenharia de Software",
+    "cor": "#f0f0f0"
+  }
+}

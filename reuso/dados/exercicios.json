@@ -1,0 +1,236 @@
+{
+  "variaveis": {
+    "titulo": "Guardar quem falou com o bot",
+    "enunciado": "O bot precisa lembrar de quem mandou a mensagem antes de responder. Complete a função <code>solucao(nome)</code> para devolver <code>Olá, NOME!</code>.",
+    "reqs": [
+      "Crie uma variável para guardar o nome recebido",
+      "Monte a saudação usando essa variável",
+      "Devolva a string terminando com \"!\""
+    ],
+    "dica": "const usuario = nome;\nreturn \"Olá, \" + usuario + \"!\";",
+    "starter": "function solucao(nome) {\n  // TODO: guarde o nome em uma variável\n  // e devolva a saudação\n\n}\n",
+    "solucao": "function solucao(nome) {\n  const usuario = nome;\n  return \"Olá, \" + usuario + \"!\";\n}\n",
+    "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\ncheck(\"devolve a saudação para Ana\", function () { return solucao(\"Ana\") === \"Olá, Ana!\"; });\ncheck(\"devolve a saudação para Lucas\", function () { return solucao(\"Lucas\") === \"Olá, Lucas!\"; });\ncheck(\"funciona com outro nome\", function () { return solucao(\"Bia\") === \"Olá, Bia!\"; });\nreturn out;"
+  },
+  "condicoes": {
+    "titulo": "Responder só quando for chamado",
+    "enunciado": "Um bot não responde a tudo: ele checa se a mensagem é para ele. Complete <code>solucao(mensagem)</code>: se for <code>\"oi\"</code>, devolva uma saudação; senão, devolva <code>null</code>.",
+    "reqs": [
+      "Use um if para testar a mensagem",
+      "Devolva uma string quando for \"oi\"",
+      "Devolva null para qualquer outra mensagem"
+    ],
+    "dica": "if (mensagem === \"oi\") {\n  return \"Olá! Como posso ajudar?\";\n}\nreturn null;",
+    "starter": "function solucao(mensagem) {\n  // TODO: se a mensagem for \"oi\", responda\n  // senão devolva null\n\n}\n",
+    "solucao": "function solucao(mensagem) {\n  if (mensagem === \"oi\") {\n    return \"Olá! Como posso ajudar?\";\n  }\n  return null;\n}\n",
+    "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\ncheck(\"responde quando a mensagem é oi\", function () { var r = solucao(\"oi\"); return typeof r === \"string\" && r.length > 0; });\ncheck(\"ignora tchau\", function () { return solucao(\"tchau\") === null; });\ncheck(\"ignora bom dia\", function () { return solucao(\"bom dia\") === null; });\nreturn out;"
+  },
+  "lacos": {
+    "titulo": "Pontuação de todas as fases",
+    "enunciado": "As fases do jogo são uma lista. Complete <code>solucao(numeros)</code> para somar todos os pontos usando um laço.",
+    "reqs": [
+      "Crie uma variável para acumular a soma",
+      "Percorra a lista com for ou while",
+      "Devolva o total (lista vazia soma 0)"
+    ],
+    "dica": "let soma = 0;\nfor (let i = 0; i < numeros.length; i++) {\n  soma = soma + numeros[i];\n}\nreturn soma;",
+    "starter": "function solucao(numeros) {\n  // TODO: some os pontos com um laço\n\n}\n",
+    "solucao": "function solucao(numeros) {\n  let soma = 0;\n  for (let i = 0; i < numeros.length; i++) {\n    soma = soma + numeros[i];\n  }\n  return soma;\n}\n",
+    "arquivos": [
+      {
+        "nome": "fases.js",
+        "starter": "// Fases do jogo: cada número é a pontuação de uma fase\nvar FASES = [120, 80, 45];\n",
+        "solucao": "// Fases do jogo: cada número é a pontuação de uma fase\nvar FASES = [120, 80, 45];\n"
+      },
+      {
+        "nome": "solucao.js",
+        "principal": true,
+        "starter": "function solucao(numeros) {\n  // TODO: some os pontos com um laço\n\n}\n",
+        "solucao": "function solucao(numeros) {\n  let soma = 0;\n  for (let i = 0; i < numeros.length; i++) {\n    soma = soma + numeros[i];\n  }\n  return soma;\n}\n"
+      }
+    ],
+    "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\ncheck(\"soma as fases do arquivo fases.js\", function () { return solucao(FASES) === 245; });\ncheck(\"lista vazia soma 0\", function () { return solucao([]) === 0; });\ncheck(\"soma com números negativos\", function () { return solucao([10, -2, 5]) === 13; });\nreturn out;"
+  },
+  "funcoes": {
+    "titulo": "Reaproveitar o cálculo de desconto",
+    "enunciado": "Crie uma função que calcule o preço com desconto. <code>solucao(preco, desconto)</code> recebe o preço e a porcentagem (0 a 100) e devolve o valor final.",
+    "reqs": [
+      "A função recebe dois números",
+      "Calcule preço menos o desconto em porcentagem",
+      "Devolva o resultado"
+    ],
+    "dica": "return preco - (preco * desconto / 100);",
+    "starter": "function solucao(preco, desconto) {\n  // TODO: aplique o desconto e devolva o preço final\n\n}\n",
+    "solucao": "function solucao(preco, desconto) {\n  return preco - (preco * desconto / 100);\n}\n",
+    "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\ncheck(\"100 com 10% vira 90\", function () { return solucao(100, 10) === 90; });\ncheck(\"200 com 25% vira 150\", function () { return solucao(200, 25) === 150; });\ncheck(\"desconto 0 mantém o preço\", function () { return solucao(50, 0) === 50; });\nreturn out;"
+  },
+  "listas": {
+    "titulo": "Listar só os aprovados",
+    "enunciado": "Cada aluno é um objeto com <code>nome</code> e <code>nota</code>. Complete <code>solucao(alunos)</code> para devolver uma lista só com os nomes de quem tem nota maior ou igual a 7.",
+    "reqs": [
+      "Percorra a lista de alunos",
+      "Filtre quem tem nota >= 7",
+      "Devolva uma lista de nomes"
+    ],
+    "dica": "return alunos.filter(function (a) { return a.nota >= 7; }).map(function (a) { return a.nome; });",
+    "starter": "function solucao(alunos) {\n  // TODO: devolva só os nomes dos aprovados\n\n}\n",
+    "solucao": "function solucao(alunos) {\n  return alunos.filter(function (a) { return a.nota >= 7; }).map(function (a) { return a.nome; });\n}\n",
+    "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nvar alunos = [{ nome: \"Ana\", nota: 8 }, { nome: \"Bia\", nota: 5 }, { nome: \"Caio\", nota: 7 }];\ncheck(\"devolve os dois aprovados\", function () { return JSON.stringify(solucao(alunos)) === JSON.stringify([\"Ana\", \"Caio\"]); });\ncheck(\"lista vazia devolve lista vazia\", function () { return solucao([]).length === 0; });\ncheck(\"nota 7 conta como aprovado\", function () { return solucao([{ nome: \"Duda\", nota: 7 }])[0] === \"Duda\"; });\nreturn out;"
+  },
+  "interfaces": {
+    "titulo": "Estruturar a página do portfólio",
+    "enunciado": "Uma interface começa pela estrutura. Complete <code>solucao(titulo)</code> para devolver um título HTML no formato <code>&lt;h1&gt;SEU TÍTULO&lt;/h1&gt;</code>.",
+    "reqs": [
+      "Abra a tag h1",
+      "Coloque o título recebido dentro",
+      "Feche a tag h1"
+    ],
+    "dica": "return \"<h1>\" + titulo + \"</h1>\";",
+    "starter": "function solucao(titulo) {\n  // TODO: devolva o título dentro de uma tag h1\n\n}\n",
+    "solucao": "function solucao(titulo) {\n  return \"<h1>\" + titulo + \"</h1>\";\n}\n",
+    "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\ncheck(\"abre a tag h1\", function () { return solucao(\"Meu portfólio\").indexOf(\"<h1>\") >= 0; });\ncheck(\"inclui o título recebido\", function () { return solucao(\"Meu portfólio\").indexOf(\"Meu portfólio\") >= 0; });\ncheck(\"fecha a tag h1\", function () { return solucao(\"Meu portfólio\").indexOf(\"</h1>\") >= 0; });\nreturn out;"
+  },
+  "apis": {
+    "titulo": "Ler a resposta da API",
+    "enunciado": "A API do Discord devolve JSON. Complete <code>solucao(resposta)</code>: transforme o texto JSON em objeto e devolva o campo <code>nome</code>.",
+    "reqs": [
+      "Use JSON.parse para ler a resposta",
+      "Acesse o campo nome",
+      "Devolva o valor encontrado"
+    ],
+    "dica": "const dados = JSON.parse(resposta);\nreturn dados.nome;",
+    "starter": "function solucao(resposta) {\n  // TODO: leia o JSON e devolva o nome\n\n}\n",
+    "solucao": "function solucao(resposta) {\n  const dados = JSON.parse(resposta);\n  return dados.nome;\n}\n",
+    "arquivos": [
+      {
+        "nome": "resposta.js",
+        "starter": "// Resposta crua que a API do Discord devolveu\nvar RESPOSTA_API = '{\"nome\":\"Ana\",\"id\":1}';\n",
+        "solucao": "// Resposta crua que a API do Discord devolveu\nvar RESPOSTA_API = '{\"nome\":\"Ana\",\"id\":1}';\n"
+      },
+      {
+        "nome": "solucao.js",
+        "principal": true,
+        "starter": "function solucao(resposta) {\n  // TODO: leia o JSON e devolva o nome\n\n}\n",
+        "solucao": "function solucao(resposta) {\n  const dados = JSON.parse(resposta);\n  return dados.nome;\n}\n"
+      }
+    ],
+    "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\ncheck(\"lê o nome da resposta da API\", function () { return solucao(RESPOSTA_API) === \"Ana\"; });\ncheck(\"lê o nome Caio\", function () { return solucao('{\"nome\":\"Caio\"}') === \"Caio\"; });\ncheck(\"funciona com espaços no JSON\", function () { return solucao('{ \"nome\": \"Bia\" }') === \"Bia\"; });\nreturn out;"
+  },
+  "arquivos": {
+    "titulo": "Contar linhas de um arquivo",
+    "enunciado": "O bot lê um arquivo de configuração. Complete <code>solucao(texto)</code> para contar quantas linhas não vazias existem.",
+    "reqs": [
+      "Separe o texto por quebra de linha",
+      "Ignore linhas vazias ou só com espaços",
+      "Devolva a quantidade"
+    ],
+    "dica": "return texto.split(\"\\n\").filter(function (l) { return l.trim() !== \"\"; }).length;",
+    "starter": "function solucao(texto) {\n  // TODO: conte as linhas não vazias\n\n}\n",
+    "solucao": "function solucao(texto) {\n  return texto.split(\"\\n\").filter(function (l) { return l.trim() !== \"\"; }).length;\n}\n",
+    "arquivos": [
+      {
+        "nome": "config.js",
+        "starter": "// Configuração do bot: em um projeto real, este arquivo fica fora do código\nvar CONFIG_TEXTO = \"token=abc123\\nprefixo=!\\n\\n# canal de avisos\\ncanal=geral\";\n",
+        "solucao": "// Configuração do bot: em um projeto real, este arquivo fica fora do código\nvar CONFIG_TEXTO = \"token=abc123\\nprefixo=!\\n\\n# canal de avisos\\ncanal=geral\";\n"
+      },
+      {
+        "nome": "solucao.js",
+        "principal": true,
+        "starter": "function solucao(texto) {\n  // TODO: conte as linhas não vazias\n\n}\n",
+        "solucao": "function solucao(texto) {\n  return texto.split(\"\\n\").filter(function (l) { return l.trim() !== \"\"; }).length;\n}\n"
+      }
+    ],
+    "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\ncheck(\"conta as linhas do arquivo de configuração\", function () { return solucao(CONFIG_TEXTO) === 4; });\ncheck(\"ignora linhas vazias\", function () { return solucao(\"a\\n\\nb\\n\") === 2; });\ncheck(\"texto vazio conta 0\", function () { return solucao(\"\") === 0; });\nreturn out;"
+  },
+  "banco": {
+    "titulo": "Filtrar alunos no banco",
+    "enunciado": "O CRUD precisa listar quem passou. Complete <code>solucao(alunos, notaMinima)</code> devolvendo só os alunos com nota maior ou igual à mínima — sem alterar a lista original.",
+    "reqs": [
+      "Receba a lista e a nota mínima",
+      "Filtre sem alterar a lista original",
+      "Devolva os objetos dos aprovados"
+    ],
+    "dica": "return alunos.filter(function (a) { return a.nota >= notaMinima; });",
+    "starter": "function solucao(alunos, notaMinima) {\n  // TODO: devolva os alunos com nota >= notaMinima\n\n}\n",
+    "solucao": "function solucao(alunos, notaMinima) {\n  return alunos.filter(function (a) { return a.nota >= notaMinima; });\n}\n",
+    "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nvar alunos = [{ nome: \"Ana\", nota: 8 }, { nome: \"Bia\", nota: 5 }, { nome: \"Caio\", nota: 7 }];\ncheck(\"filtra os aprovados\", function () { return solucao(alunos, 7).length === 2; });\ncheck(\"mantém a lista original\", function () { return alunos.length === 3; });\ncheck(\"nota mínima 9 não acha ninguém\", function () { return solucao(alunos, 9).length === 0; });\nreturn out;"
+  },
+  "banco2": {
+    "titulo": "Apagar um aluno sem quebrar a lista",
+    "enunciado": "No CRUD, apagar é a operação mais perigosa. Complete <code>solucao(alunos, id)</code> devolvendo uma lista sem o aluno daquele id.",
+    "reqs": [
+      "Receba a lista e o id a remover",
+      "Devolva uma lista nova, sem o id",
+      "Se o id não existir, devolva todos"
+    ],
+    "dica": "return alunos.filter(function (a) { return a.id !== id; });",
+    "starter": "function solucao(alunos, id) {\n  // TODO: devolva a lista sem o aluno com esse id\n\n}\n",
+    "solucao": "function solucao(alunos, id) {\n  return alunos.filter(function (a) { return a.id !== id; });\n}\n",
+    "arquivos": [
+      {
+        "nome": "alunos.js",
+        "starter": "// Alunos já cadastrados no \"banco\" do CRUD\nvar ALUNOS = [{ id: 1, nome: \"Ana\" }, { id: 2, nome: \"Bia\" }, { id: 3, nome: \"Caio\" }];\n",
+        "solucao": "// Alunos já cadastrados no \"banco\" do CRUD\nvar ALUNOS = [{ id: 1, nome: \"Ana\" }, { id: 2, nome: \"Bia\" }, { id: 3, nome: \"Caio\" }];\n"
+      },
+      {
+        "nome": "solucao.js",
+        "principal": true,
+        "starter": "function solucao(alunos, id) {\n  // TODO: devolva a lista sem o aluno com esse id\n\n}\n",
+        "solucao": "function solucao(alunos, id) {\n  return alunos.filter(function (a) { return a.id !== id; });\n}\n"
+      }
+    ],
+    "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\ncheck(\"remove o aluno 2 do banco\", function () { var r = solucao(ALUNOS, 2); return r.length === 2 && r[0].id === 1 && r[1].id === 3; });\ncheck(\"não altera a lista original\", function () { return ALUNOS.length === 3; });\ncheck(\"id inexistente mantém todos\", function () { return solucao(ALUNOS, 99).length === 3; });\nreturn out;"
+  },
+  "design": {
+    "titulo": "Definir o tema visual",
+    "enunciado": "O portfólio precisa de um tema. Complete <code>solucao(cor)</code> devolvendo um objeto com <code>fundo</code>, <code>texto</code> e <code>destaque</code>. Use fundo escuro e texto claro.",
+    "reqs": [
+      "Devolva um objeto",
+      "Tenha as chaves fundo, texto e destaque",
+      "Use a cor recebida como destaque"
+    ],
+    "dica": "return { fundo: \"#0b0b14\", texto: \"#f5f3ff\", destaque: cor };",
+    "starter": "function solucao(cor) {\n  // TODO: devolva o tema com fundo, texto e destaque\n\n}\n",
+    "solucao": "function solucao(cor) {\n  return { fundo: \"#0b0b14\", texto: \"#f5f3ff\", destaque: cor };\n}\n",
+    "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\ncheck(\"tem as três chaves\", function () { var t = solucao(\"#ffd700\"); return !!t.fundo && !!t.texto && !!t.destaque; });\ncheck(\"usa a cor recebida no destaque\", function () { return solucao(\"#ffd700\").destaque === \"#ffd700\"; });\ncheck(\"fundo e texto são diferentes\", function () { var t = solucao(\"#ffd700\"); return t.fundo !== t.texto; });\nreturn out;"
+  },
+  "git": {
+    "titulo": "Montar o primeiro commit",
+    "enunciado": "Publique o projeto. Complete <code>solucao()</code> devolvendo a sequência de comandos do primeiro commit: iniciar o repositório, adicionar os arquivos e commitar.",
+    "reqs": [
+      "Inclua o comando git init",
+      "Inclua git add para todos os arquivos",
+      "Inclua git commit com uma mensagem"
+    ],
+    "dica": "return [\"git init\", \"git add .\", \"git commit -m \\\"primeiro commit\\\"\"];",
+    "starter": "function solucao() {\n  // TODO: devolva os comandos na ordem certa\n\n}\n",
+    "solucao": "function solucao() {\n  return [\"git init\", \"git add .\", \"git commit -m \\\"primeiro commit\\\"\"];\n}\n",
+    "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\ncheck(\"devolve uma lista de comandos\", function () { return Array.isArray(solucao()) && solucao().length >= 3; });\ncheck(\"inicia o repositório\", function () { return solucao().join(\" \").indexOf(\"git init\") >= 0; });\ncheck(\"adiciona os arquivos\", function () { return solucao().some(function (c) { return String(c).indexOf(\"git add\") === 0; }); });\ncheck(\"commita com mensagem\", function () { return solucao().some(function (c) { return String(c).indexOf(\"git commit\") === 0 && String(c).indexOf(\"-m\") >= 0; }); });\nreturn out;"
+  },
+  "movimento": {
+    "titulo": "O personagem se move",
+    "enunciado": "Movimento é estado: a posição muda a cada quadro. Complete <code>solucao(pos, vel, dt)</code> devolvendo a nova posição depois de <code>dt</code> segundos.",
+    "reqs": [
+      "Multiplique a velocidade pelo tempo",
+      "Some à posição atual",
+      "Devolva a nova posição"
+    ],
+    "dica": "return pos + vel * dt;",
+    "starter": "function solucao(pos, vel, dt) {\n  // TODO: calcule a nova posição\n\n}\n",
+    "solucao": "function solucao(pos, vel, dt) {\n  return pos + vel * dt;\n}\n",
+    "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\ncheck(\"anda 6 a partir de 10\", function () { return solucao(10, 2, 3) === 16; });\ncheck(\"velocidade negativa volta\", function () { return solucao(0, -5, 2) === -10; });\ncheck(\"funciona com decimais\", function () { return solucao(2.5, 1, 2) === 4.5; });\nreturn out;"
+  },
+  "colisao": {
+    "titulo": "Detectar colisão",
+    "enunciado": "Sem regra não existe jogo. Complete <code>solucao(a, b)</code> para devolver <code>true</code> quando dois retângulos se sobrepõem. Cada um tem <code>x</code>, <code>y</code>, <code>w</code> e <code>h</code>.",
+    "reqs": [
+      "Compare os eixos x e y",
+      "Considere a largura e a altura dos dois",
+      "Devolva true só quando houver sobreposição"
+    ],
+    "dica": "return a.x < b.x + b.w && a.x + a.w > b.x &&\n       a.y < b.y + b.h && a.y + a.h > b.y;",
+    "starter": "function solucao(a, b) {\n  // TODO: devolva true se os retângulos se sobrepõem\n\n}\n",
+    "solucao": "function solucao(a, b) {\n  return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;\n}\n",
+    "testes": "var out = [];\nfunction check(nome, fn) {\n  try {\n    var r = fn();\n    out.push({ nome: nome, ok: r === true, detalhe: r === true ? \"\" : String(r || \"falhou\") });\n  } catch (e) {\n    out.push({ nome: nome, ok: false, detalhe: e.message });\n  }\n}\nvar a = { x: 0, y: 0, w: 10, h: 10 };\ncheck(\"detecta sobreposição\", function () { return solucao(a, { x: 5, y: 5, w: 10, h: 10 }) === true; });\ncheck(\"detecta que estão longe\", function () { return solucao(a, { x: 20, y: 20, w: 5, h: 5 }) === false; });\ncheck(\"um dentro do outro colide\", function () { return solucao(a, { x: 2, y: 2, w: 3, h: 3 }) === true; });\nreturn out;"
+  }
+}

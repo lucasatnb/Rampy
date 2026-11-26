@@ -1,0 +1,13 @@
+{
+  "id": "lunox-gato",
+  "nome": "Lunox",
+  "temporario": true,
+  "alt": "Lunox, o gato das estrelas",
+  "fundo": "embutido",
+  "niveis": [
+    { "de": 1, "ate": 3, "imagem": "lunox1.png" },
+    { "de": 4, "ate": 6, "imagem": "lunox2.png" },
+    { "de": 7, "ate": null, "imagem": "lunox3.png" }
+  ],
+  "poses": {}
+}

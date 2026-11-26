@@ -1,0 +1,1306 @@
+[
+  {
+    "id": "variaveis",
+    "nome": "Variáveis",
+    "star": "FU2",
+    "root": "FU",
+    "icon": "⭐",
+    "item": "Coleira estrelada"
+  },
+  {
+    "id": "condicoes",
+    "nome": "Condições",
+    "star": "FU3",
+    "root": "FU",
+    "icon": "🌟",
+    "item": "Óculos de decisão"
+  },
+  {
+    "id": "lacos",
+    "nome": "Laços",
+    "star": "FU4",
+    "root": "FU",
+    "icon": "✨",
+    "item": "Rastro de cometa"
+  },
+  {
+    "id": "funcoes",
+    "nome": "Funções",
+    "star": "FU5",
+    "root": "FU",
+    "icon": "💫",
+    "item": "Capa de mago"
+  },
+  {
+    "id": "listas",
+    "nome": "Listas",
+    "star": "FU6",
+    "root": "FU",
+    "icon": "🔆",
+    "item": "Mochila de itens"
+  },
+  {
+    "id": "interfaces",
+    "nome": "Interfaces",
+    "star": "FE1",
+    "root": "FE",
+    "icon": "🪐",
+    "item": "Óculos espaciais"
+  },
+  {
+    "id": "apis",
+    "nome": "APIs",
+    "star": "BE2",
+    "root": "BE",
+    "icon": "🛰️",
+    "item": "Antena orbital"
+  },
+  {
+    "id": "arquivos",
+    "nome": "Arquivos",
+    "star": "FU8",
+    "root": "FU",
+    "icon": "📁",
+    "item": "Bolsa de mapas"
+  },
+  {
+    "id": "banco",
+    "nome": "Banco de dados",
+    "star": "DB1",
+    "root": "DB",
+    "icon": "🗄️",
+    "item": "Baú de dados"
+  },
+  {
+    "id": "git",
+    "nome": "Git",
+    "star": "FU16",
+    "root": "FU",
+    "icon": "🌿",
+    "item": "Crachá de commit"
+  },
+  {
+    "id": "logica",
+    "nome": "Lógica de programação",
+    "star": "FU1",
+    "root": "FU",
+    "icon": "⭐",
+    "item": ""
+  },
+  {
+    "id": "strings",
+    "nome": "Strings e texto",
+    "star": "FU7",
+    "root": "FU",
+    "icon": "⭐",
+    "item": ""
+  },
+  {
+    "id": "excecoes",
+    "nome": "Erros e exceções",
+    "star": "FU9",
+    "root": "FU",
+    "icon": "⭐",
+    "item": ""
+  },
+  {
+    "id": "algoritmos",
+    "nome": "Algoritmos básicos",
+    "star": "FU11",
+    "root": "FU",
+    "icon": "⭐",
+    "item": ""
+  },
+  {
+    "id": "recursao",
+    "nome": "Recursão",
+    "star": "FU14",
+    "root": "FU",
+    "icon": "⭐",
+    "item": ""
+  },
+  {
+    "id": "css",
+    "nome": "CSS",
+    "star": "FE2",
+    "root": "FE",
+    "icon": "🪐",
+    "item": ""
+  },
+  {
+    "id": "acessibilidade",
+    "nome": "Acessibilidade",
+    "star": "FE7",
+    "root": "FE",
+    "icon": "🪐",
+    "item": ""
+  },
+  {
+    "id": "http",
+    "nome": "HTTP e a web",
+    "star": "BE1",
+    "root": "BE",
+    "icon": "🛰️",
+    "item": ""
+  },
+  {
+    "id": "autenticacao",
+    "nome": "Autenticação",
+    "star": "BE7",
+    "root": "BE",
+    "icon": "🛰️",
+    "item": ""
+  },
+  {
+    "id": "validacao",
+    "nome": "Validação de dados",
+    "star": "BE11",
+    "root": "BE",
+    "icon": "🛰️",
+    "item": ""
+  },
+  {
+    "id": "joins",
+    "nome": "JOINs",
+    "star": "DB3",
+    "root": "DB",
+    "icon": "🗄️",
+    "item": ""
+  },
+  {
+    "id": "linux",
+    "nome": "Linux",
+    "star": "DO1",
+    "root": "DO",
+    "icon": "☁️",
+    "item": ""
+  },
+  {
+    "id": "cia",
+    "nome": "Princípios (CIA)",
+    "star": "SE1",
+    "root": "SE",
+    "icon": "🛡️",
+    "item": ""
+  },
+  {
+    "id": "eletronica",
+    "nome": "Eletrônica básica",
+    "star": "EM1",
+    "root": "EM",
+    "icon": "🔌",
+    "item": ""
+  },
+  {
+    "id": "numpy",
+    "nome": "NumPy",
+    "star": "IA1",
+    "root": "IA",
+    "icon": "🧠",
+    "item": ""
+  },
+  {
+    "id": "estatistica",
+    "nome": "Estatística",
+    "star": "IA4",
+    "root": "IA",
+    "icon": "🧠",
+    "item": ""
+  },
+  {
+    "id": "algebra",
+    "nome": "Álgebra linear",
+    "star": "IA5",
+    "root": "IA",
+    "icon": "🧠",
+    "item": ""
+  },
+  {
+    "id": "automacao",
+    "nome": "Scripts de automação",
+    "star": "BO1",
+    "root": "BO",
+    "icon": "🤖",
+    "item": ""
+  },
+  {
+    "id": "gameloop",
+    "nome": "Game loop",
+    "star": "JG1",
+    "root": "JG",
+    "icon": "🎮",
+    "item": ""
+  },
+  {
+    "id": "gamedesign",
+    "nome": "Game design",
+    "star": "JG9",
+    "root": "JG",
+    "icon": "🎮",
+    "item": ""
+  },
+  {
+    "id": "mobile",
+    "nome": "Design mobile",
+    "star": "MO1",
+    "root": "MO",
+    "icon": "📱",
+    "item": ""
+  },
+  {
+    "id": "codigolimpo",
+    "nome": "Código limpo",
+    "star": "ES1",
+    "root": "ES",
+    "icon": "🧱",
+    "item": ""
+  },
+  {
+    "id": "ageis",
+    "nome": "Metodologias ágeis",
+    "star": "ES4",
+    "root": "ES",
+    "icon": "🧱",
+    "item": ""
+  },
+  {
+    "id": "docs",
+    "nome": "Documentação técnica",
+    "star": "ES6",
+    "root": "ES",
+    "icon": "🧱",
+    "item": ""
+  },
+  {
+    "id": "st-fu20",
+    "nome": "Python",
+    "star": "FU20",
+    "root": "FU",
+    "icon": "⭐",
+    "item": ""
+  },
+  {
+    "id": "st-fu10",
+    "nome": "Orientação a objetos",
+    "star": "FU10",
+    "root": "FU",
+    "icon": "⭐",
+    "item": ""
+  },
+  {
+    "id": "st-fu12",
+    "nome": "Estruturas de dados",
+    "star": "FU12",
+    "root": "FU",
+    "icon": "⭐",
+    "item": ""
+  },
+  {
+    "id": "st-fu13",
+    "nome": "Complexidade (Big-O)",
+    "star": "FU13",
+    "root": "FU",
+    "icon": "⭐",
+    "item": ""
+  },
+  {
+    "id": "st-fu15",
+    "nome": "Terminal (CLI)",
+    "star": "FU15",
+    "root": "FU",
+    "icon": "⭐",
+    "item": ""
+  },
+  {
+    "id": "st-fu17",
+    "nome": "Depuração (debug)",
+    "star": "FU17",
+    "root": "FU",
+    "icon": "⭐",
+    "item": ""
+  },
+  {
+    "id": "st-fu18",
+    "nome": "Ler documentação",
+    "star": "FU18",
+    "root": "FU",
+    "icon": "⭐",
+    "item": ""
+  },
+  {
+    "id": "st-fu19",
+    "nome": "Testes automatizados",
+    "star": "FU19",
+    "root": "FU",
+    "icon": "⭐",
+    "item": ""
+  },
+  {
+    "id": "st-fe3",
+    "nome": "JavaScript",
+    "star": "FE3",
+    "root": "FE",
+    "icon": "🪐",
+    "item": ""
+  },
+  {
+    "id": "st-fe4",
+    "nome": "DOM e eventos",
+    "star": "FE4",
+    "root": "FE",
+    "icon": "🪐",
+    "item": ""
+  },
+  {
+    "id": "st-fe5",
+    "nome": "Flexbox e Grid",
+    "star": "FE5",
+    "root": "FE",
+    "icon": "🪐",
+    "item": ""
+  },
+  {
+    "id": "st-fe6",
+    "nome": "Design responsivo",
+    "star": "FE6",
+    "root": "FE",
+    "icon": "🪐",
+    "item": ""
+  },
+  {
+    "id": "st-fe8",
+    "nome": "Fetch e APIs",
+    "star": "FE8",
+    "root": "FE",
+    "icon": "🪐",
+    "item": ""
+  },
+  {
+    "id": "st-fe9",
+    "nome": "TypeScript",
+    "star": "FE9",
+    "root": "FE",
+    "icon": "🪐",
+    "item": ""
+  },
+  {
+    "id": "st-fe10",
+    "nome": "React",
+    "star": "FE10",
+    "root": "FE",
+    "icon": "🪐",
+    "item": ""
+  },
+  {
+    "id": "st-fe11",
+    "nome": "Estado e hooks",
+    "star": "FE11",
+    "root": "FE",
+    "icon": "🪐",
+    "item": ""
+  },
+  {
+    "id": "st-fe12",
+    "nome": "Rotas (SPA)",
+    "star": "FE12",
+    "root": "FE",
+    "icon": "🪐",
+    "item": ""
+  },
+  {
+    "id": "st-fe13",
+    "nome": "Tailwind CSS",
+    "star": "FE13",
+    "root": "FE",
+    "icon": "🪐",
+    "item": ""
+  },
+  {
+    "id": "st-fe14",
+    "nome": "Next.js e SSR",
+    "star": "FE14",
+    "root": "FE",
+    "icon": "🪐",
+    "item": ""
+  },
+  {
+    "id": "st-fe15",
+    "nome": "Vite e bundlers",
+    "star": "FE15",
+    "root": "FE",
+    "icon": "🪐",
+    "item": ""
+  },
+  {
+    "id": "st-fe16",
+    "nome": "Testes de front-end",
+    "star": "FE16",
+    "root": "FE",
+    "icon": "🪐",
+    "item": ""
+  },
+  {
+    "id": "st-fe17",
+    "nome": "Performance web",
+    "star": "FE17",
+    "root": "FE",
+    "icon": "🪐",
+    "item": ""
+  },
+  {
+    "id": "st-fe18",
+    "nome": "UX/UI e Figma",
+    "star": "FE18",
+    "root": "FE",
+    "icon": "🪐",
+    "item": ""
+  },
+  {
+    "id": "st-fe19",
+    "nome": "Animações",
+    "star": "FE19",
+    "root": "FE",
+    "icon": "🪐",
+    "item": ""
+  },
+  {
+    "id": "st-fe20",
+    "nome": "PWA",
+    "star": "FE20",
+    "root": "FE",
+    "icon": "🪐",
+    "item": ""
+  },
+  {
+    "id": "st-be3",
+    "nome": "Flask",
+    "star": "BE3",
+    "root": "BE",
+    "icon": "🛰️",
+    "item": ""
+  },
+  {
+    "id": "st-be4",
+    "nome": "FastAPI",
+    "star": "BE4",
+    "root": "BE",
+    "icon": "🛰️",
+    "item": ""
+  },
+  {
+    "id": "st-be5",
+    "nome": "Node.js",
+    "star": "BE5",
+    "root": "BE",
+    "icon": "🛰️",
+    "item": ""
+  },
+  {
+    "id": "st-be6",
+    "nome": "Express",
+    "star": "BE6",
+    "root": "BE",
+    "icon": "🛰️",
+    "item": ""
+  },
+  {
+    "id": "st-be8",
+    "nome": "JWT e sessões",
+    "star": "BE8",
+    "root": "BE",
+    "icon": "🛰️",
+    "item": ""
+  },
+  {
+    "id": "st-be9",
+    "nome": "OAuth",
+    "star": "BE9",
+    "root": "BE",
+    "icon": "🛰️",
+    "item": ""
+  },
+  {
+    "id": "st-be10",
+    "nome": "ORM",
+    "star": "BE10",
+    "root": "BE",
+    "icon": "🛰️",
+    "item": ""
+  },
+  {
+    "id": "st-be12",
+    "nome": "WebSockets",
+    "star": "BE12",
+    "root": "BE",
+    "icon": "🛰️",
+    "item": ""
+  },
+  {
+    "id": "st-be13",
+    "nome": "Filas e tarefas",
+    "star": "BE13",
+    "root": "BE",
+    "icon": "🛰️",
+    "item": ""
+  },
+  {
+    "id": "st-be14",
+    "nome": "Cache",
+    "star": "BE14",
+    "root": "BE",
+    "icon": "🛰️",
+    "item": ""
+  },
+  {
+    "id": "st-be15",
+    "nome": "Arquitetura em camadas",
+    "star": "BE15",
+    "root": "BE",
+    "icon": "🛰️",
+    "item": ""
+  },
+  {
+    "id": "st-be16",
+    "nome": "Microsserviços",
+    "star": "BE16",
+    "root": "BE",
+    "icon": "🛰️",
+    "item": ""
+  },
+  {
+    "id": "st-be17",
+    "nome": "GraphQL",
+    "star": "BE17",
+    "root": "BE",
+    "icon": "🛰️",
+    "item": ""
+  },
+  {
+    "id": "st-be18",
+    "nome": "Webhooks",
+    "star": "BE18",
+    "root": "BE",
+    "icon": "🛰️",
+    "item": ""
+  },
+  {
+    "id": "st-be19",
+    "nome": "OpenAPI / Swagger",
+    "star": "BE19",
+    "root": "BE",
+    "icon": "🛰️",
+    "item": ""
+  },
+  {
+    "id": "st-db2",
+    "nome": "Modelagem relacional",
+    "star": "DB2",
+    "root": "DB",
+    "icon": "🗄️",
+    "item": ""
+  },
+  {
+    "id": "st-db4",
+    "nome": "Índices",
+    "star": "DB4",
+    "root": "DB",
+    "icon": "🗄️",
+    "item": ""
+  },
+  {
+    "id": "st-db5",
+    "nome": "Transações (ACID)",
+    "star": "DB5",
+    "root": "DB",
+    "icon": "🗄️",
+    "item": ""
+  },
+  {
+    "id": "st-db6",
+    "nome": "SQLite",
+    "star": "DB6",
+    "root": "DB",
+    "icon": "🗄️",
+    "item": ""
+  },
+  {
+    "id": "st-db7",
+    "nome": "PostgreSQL",
+    "star": "DB7",
+    "root": "DB",
+    "icon": "🗄️",
+    "item": ""
+  },
+  {
+    "id": "st-db8",
+    "nome": "MongoDB (NoSQL)",
+    "star": "DB8",
+    "root": "DB",
+    "icon": "🗄️",
+    "item": ""
+  },
+  {
+    "id": "st-db9",
+    "nome": "Redis",
+    "star": "DB9",
+    "root": "DB",
+    "icon": "🗄️",
+    "item": ""
+  },
+  {
+    "id": "st-db10",
+    "nome": "Migrações",
+    "star": "DB10",
+    "root": "DB",
+    "icon": "🗄️",
+    "item": ""
+  },
+  {
+    "id": "st-db11",
+    "nome": "Normalização",
+    "star": "DB11",
+    "root": "DB",
+    "icon": "🗄️",
+    "item": ""
+  },
+  {
+    "id": "st-db12",
+    "nome": "Backup e restauração",
+    "star": "DB12",
+    "root": "DB",
+    "icon": "🗄️",
+    "item": ""
+  },
+  {
+    "id": "st-db13",
+    "nome": "Bancos vetoriais",
+    "star": "DB13",
+    "root": "DB",
+    "icon": "🗄️",
+    "item": ""
+  },
+  {
+    "id": "st-do2",
+    "nome": "Shell script",
+    "star": "DO2",
+    "root": "DO",
+    "icon": "☁️",
+    "item": ""
+  },
+  {
+    "id": "st-do3",
+    "nome": "Redes (TCP/IP)",
+    "star": "DO3",
+    "root": "DO",
+    "icon": "☁️",
+    "item": ""
+  },
+  {
+    "id": "st-do4",
+    "nome": "Docker",
+    "star": "DO4",
+    "root": "DO",
+    "icon": "☁️",
+    "item": ""
+  },
+  {
+    "id": "st-do5",
+    "nome": "Docker Compose",
+    "star": "DO5",
+    "root": "DO",
+    "icon": "☁️",
+    "item": ""
+  },
+  {
+    "id": "st-do6",
+    "nome": "CI/CD",
+    "star": "DO6",
+    "root": "DO",
+    "icon": "☁️",
+    "item": ""
+  },
+  {
+    "id": "st-do7",
+    "nome": "GitHub Actions",
+    "star": "DO7",
+    "root": "DO",
+    "icon": "☁️",
+    "item": ""
+  },
+  {
+    "id": "st-do8",
+    "nome": "Nuvem (AWS/GCP)",
+    "star": "DO8",
+    "root": "DO",
+    "icon": "☁️",
+    "item": ""
+  },
+  {
+    "id": "st-do9",
+    "nome": "Deploy",
+    "star": "DO9",
+    "root": "DO",
+    "icon": "☁️",
+    "item": ""
+  },
+  {
+    "id": "st-do10",
+    "nome": "Nginx",
+    "star": "DO10",
+    "root": "DO",
+    "icon": "☁️",
+    "item": ""
+  },
+  {
+    "id": "st-do11",
+    "nome": "Kubernetes",
+    "star": "DO11",
+    "root": "DO",
+    "icon": "☁️",
+    "item": ""
+  },
+  {
+    "id": "st-do12",
+    "nome": "Terraform (IaC)",
+    "star": "DO12",
+    "root": "DO",
+    "icon": "☁️",
+    "item": ""
+  },
+  {
+    "id": "st-do13",
+    "nome": "Monitoramento",
+    "star": "DO13",
+    "root": "DO",
+    "icon": "☁️",
+    "item": ""
+  },
+  {
+    "id": "st-do14",
+    "nome": "Logs",
+    "star": "DO14",
+    "root": "DO",
+    "icon": "☁️",
+    "item": ""
+  },
+  {
+    "id": "st-do15",
+    "nome": "DNS e HTTPS",
+    "star": "DO15",
+    "root": "DO",
+    "icon": "☁️",
+    "item": ""
+  },
+  {
+    "id": "st-do16",
+    "nome": "Variáveis de ambiente",
+    "star": "DO16",
+    "root": "DO",
+    "icon": "☁️",
+    "item": ""
+  },
+  {
+    "id": "st-se2",
+    "nome": "Senhas e hash",
+    "star": "SE2",
+    "root": "SE",
+    "icon": "🛡️",
+    "item": ""
+  },
+  {
+    "id": "st-se3",
+    "nome": "Criptografia",
+    "star": "SE3",
+    "root": "SE",
+    "icon": "🛡️",
+    "item": ""
+  },
+  {
+    "id": "st-se4",
+    "nome": "HTTPS / TLS",
+    "star": "SE4",
+    "root": "SE",
+    "icon": "🛡️",
+    "item": ""
+  },
+  {
+    "id": "st-se5",
+    "nome": "OWASP Top 10",
+    "star": "SE5",
+    "root": "SE",
+    "icon": "🛡️",
+    "item": ""
+  },
+  {
+    "id": "st-se6",
+    "nome": "SQL Injection",
+    "star": "SE6",
+    "root": "SE",
+    "icon": "🛡️",
+    "item": ""
+  },
+  {
+    "id": "st-se7",
+    "nome": "XSS e CSRF",
+    "star": "SE7",
+    "root": "SE",
+    "icon": "🛡️",
+    "item": ""
+  },
+  {
+    "id": "st-se8",
+    "nome": "Gestão de segredos",
+    "star": "SE8",
+    "root": "SE",
+    "icon": "🛡️",
+    "item": ""
+  },
+  {
+    "id": "st-se9",
+    "nome": "Pentest básico",
+    "star": "SE9",
+    "root": "SE",
+    "icon": "🛡️",
+    "item": ""
+  },
+  {
+    "id": "st-se10",
+    "nome": "Hardening de servidor",
+    "star": "SE10",
+    "root": "SE",
+    "icon": "🛡️",
+    "item": ""
+  },
+  {
+    "id": "st-ia2",
+    "nome": "Pandas",
+    "star": "IA2",
+    "root": "IA",
+    "icon": "🧠",
+    "item": ""
+  },
+  {
+    "id": "st-ia3",
+    "nome": "Visualização de dados",
+    "star": "IA3",
+    "root": "IA",
+    "icon": "🧠",
+    "item": ""
+  },
+  {
+    "id": "st-ia6",
+    "nome": "scikit-learn",
+    "star": "IA6",
+    "root": "IA",
+    "icon": "🧠",
+    "item": ""
+  },
+  {
+    "id": "st-ia7",
+    "nome": "KNN",
+    "star": "IA7",
+    "root": "IA",
+    "icon": "🧠",
+    "item": ""
+  },
+  {
+    "id": "st-ia8",
+    "nome": "Avaliação de modelos",
+    "star": "IA8",
+    "root": "IA",
+    "icon": "🧠",
+    "item": ""
+  },
+  {
+    "id": "st-ia9",
+    "nome": "Redes neurais (MLP)",
+    "star": "IA9",
+    "root": "IA",
+    "icon": "🧠",
+    "item": ""
+  },
+  {
+    "id": "st-ia10",
+    "nome": "CNN e visão",
+    "star": "IA10",
+    "root": "IA",
+    "icon": "🧠",
+    "item": ""
+  },
+  {
+    "id": "st-ia11",
+    "nome": "PyTorch / TensorFlow",
+    "star": "IA11",
+    "root": "IA",
+    "icon": "🧠",
+    "item": ""
+  },
+  {
+    "id": "st-ia12",
+    "nome": "NLP",
+    "star": "IA12",
+    "root": "IA",
+    "icon": "🧠",
+    "item": ""
+  },
+  {
+    "id": "st-ia13",
+    "nome": "LLMs e prompts",
+    "star": "IA13",
+    "root": "IA",
+    "icon": "🧠",
+    "item": ""
+  },
+  {
+    "id": "st-ia14",
+    "nome": "APIs de LLM",
+    "star": "IA14",
+    "root": "IA",
+    "icon": "🧠",
+    "item": ""
+  },
+  {
+    "id": "st-ia15",
+    "nome": "RAG",
+    "star": "IA15",
+    "root": "IA",
+    "icon": "🧠",
+    "item": ""
+  },
+  {
+    "id": "st-ia16",
+    "nome": "Extração de características",
+    "star": "IA16",
+    "root": "IA",
+    "icon": "🧠",
+    "item": ""
+  },
+  {
+    "id": "st-ia17",
+    "nome": "MLOps",
+    "star": "IA17",
+    "root": "IA",
+    "icon": "🧠",
+    "item": ""
+  },
+  {
+    "id": "st-mo2",
+    "nome": "Flutter (Dart)",
+    "star": "MO2",
+    "root": "MO",
+    "icon": "📱",
+    "item": ""
+  },
+  {
+    "id": "st-mo3",
+    "nome": "React Native",
+    "star": "MO3",
+    "root": "MO",
+    "icon": "📱",
+    "item": ""
+  },
+  {
+    "id": "st-mo4",
+    "nome": "Android (Kotlin)",
+    "star": "MO4",
+    "root": "MO",
+    "icon": "📱",
+    "item": ""
+  },
+  {
+    "id": "st-mo5",
+    "nome": "Navegação de telas",
+    "star": "MO5",
+    "root": "MO",
+    "icon": "📱",
+    "item": ""
+  },
+  {
+    "id": "st-mo6",
+    "nome": "Consumo de API",
+    "star": "MO6",
+    "root": "MO",
+    "icon": "📱",
+    "item": ""
+  },
+  {
+    "id": "st-mo7",
+    "nome": "Armazenamento local",
+    "star": "MO7",
+    "root": "MO",
+    "icon": "📱",
+    "item": ""
+  },
+  {
+    "id": "st-mo8",
+    "nome": "Publicar na loja",
+    "star": "MO8",
+    "root": "MO",
+    "icon": "📱",
+    "item": ""
+  },
+  {
+    "id": "st-mo9",
+    "nome": "Notificações push",
+    "star": "MO9",
+    "root": "MO",
+    "icon": "📱",
+    "item": ""
+  },
+  {
+    "id": "st-bo2",
+    "nome": "Web scraping",
+    "star": "BO2",
+    "root": "BO",
+    "icon": "🤖",
+    "item": ""
+  },
+  {
+    "id": "st-bo3",
+    "nome": "Regex",
+    "star": "BO3",
+    "root": "BO",
+    "icon": "🤖",
+    "item": ""
+  },
+  {
+    "id": "st-bo4",
+    "nome": "Planilhas (Excel)",
+    "star": "BO4",
+    "root": "BO",
+    "icon": "🤖",
+    "item": ""
+  },
+  {
+    "id": "st-bo5",
+    "nome": "Agendamento (cron)",
+    "star": "BO5",
+    "root": "BO",
+    "icon": "🤖",
+    "item": ""
+  },
+  {
+    "id": "st-bo6",
+    "nome": "Bots de Discord",
+    "star": "BO6",
+    "root": "BO",
+    "icon": "🤖",
+    "item": ""
+  },
+  {
+    "id": "st-bo7",
+    "nome": "Bots de WhatsApp",
+    "star": "BO7",
+    "root": "BO",
+    "icon": "🤖",
+    "item": ""
+  },
+  {
+    "id": "st-bo8",
+    "nome": "APIs de mensageria",
+    "star": "BO8",
+    "root": "BO",
+    "icon": "🤖",
+    "item": ""
+  },
+  {
+    "id": "st-bo9",
+    "nome": "Streamlit",
+    "star": "BO9",
+    "root": "BO",
+    "icon": "🤖",
+    "item": ""
+  },
+  {
+    "id": "st-bo10",
+    "nome": "Interfaces Tkinter",
+    "star": "BO10",
+    "root": "BO",
+    "icon": "🤖",
+    "item": ""
+  },
+  {
+    "id": "st-jg2",
+    "nome": "Pygame",
+    "star": "JG2",
+    "root": "JG",
+    "icon": "🎮",
+    "item": ""
+  },
+  {
+    "id": "st-jg3",
+    "nome": "Sprites e colisão",
+    "star": "JG3",
+    "root": "JG",
+    "icon": "🎮",
+    "item": ""
+  },
+  {
+    "id": "st-jg4",
+    "nome": "Física 2D",
+    "star": "JG4",
+    "root": "JG",
+    "icon": "🎮",
+    "item": ""
+  },
+  {
+    "id": "st-jg5",
+    "nome": "Godot",
+    "star": "JG5",
+    "root": "JG",
+    "icon": "🎮",
+    "item": ""
+  },
+  {
+    "id": "st-jg6",
+    "nome": "Unity (C#)",
+    "star": "JG6",
+    "root": "JG",
+    "icon": "🎮",
+    "item": ""
+  },
+  {
+    "id": "st-jg7",
+    "nome": "IA de NPCs",
+    "star": "JG7",
+    "root": "JG",
+    "icon": "🎮",
+    "item": ""
+  },
+  {
+    "id": "st-jg8",
+    "nome": "Mods de Minecraft",
+    "star": "JG8",
+    "root": "JG",
+    "icon": "🎮",
+    "item": ""
+  },
+  {
+    "id": "st-jg10",
+    "nome": "Áudio e efeitos",
+    "star": "JG10",
+    "root": "JG",
+    "icon": "🎮",
+    "item": ""
+  },
+  {
+    "id": "st-em2",
+    "nome": "Arduino",
+    "star": "EM2",
+    "root": "EM",
+    "icon": "🔌",
+    "item": ""
+  },
+  {
+    "id": "st-em3",
+    "nome": "C/C++",
+    "star": "EM3",
+    "root": "EM",
+    "icon": "🔌",
+    "item": ""
+  },
+  {
+    "id": "st-em4",
+    "nome": "Sensores e atuadores",
+    "star": "EM4",
+    "root": "EM",
+    "icon": "🔌",
+    "item": ""
+  },
+  {
+    "id": "st-em5",
+    "nome": "ESP32",
+    "star": "EM5",
+    "root": "EM",
+    "icon": "🔌",
+    "item": ""
+  },
+  {
+    "id": "st-em6",
+    "nome": "MQTT",
+    "star": "EM6",
+    "root": "EM",
+    "icon": "🔌",
+    "item": ""
+  },
+  {
+    "id": "st-em7",
+    "nome": "TinyML",
+    "star": "EM7",
+    "root": "EM",
+    "icon": "🔌",
+    "item": ""
+  },
+  {
+    "id": "st-em8",
+    "nome": "I2C e SPI",
+    "star": "EM8",
+    "root": "EM",
+    "icon": "🔌",
+    "item": ""
+  },
+  {
+    "id": "st-em9",
+    "nome": "Raspberry Pi",
+    "star": "EM9",
+    "root": "EM",
+    "icon": "🔌",
+    "item": ""
+  },
+  {
+    "id": "st-es2",
+    "nome": "Padrões de projeto",
+    "star": "ES2",
+    "root": "ES",
+    "icon": "🧱",
+    "item": ""
+  },
+  {
+    "id": "st-es3",
+    "nome": "Princípios SOLID",
+    "star": "ES3",
+    "root": "ES",
+    "icon": "🧱",
+    "item": ""
+  },
+  {
+    "id": "st-es5",
+    "nome": "Code review",
+    "star": "ES5",
+    "root": "ES",
+    "icon": "🧱",
+    "item": ""
+  },
+  {
+    "id": "st-es7",
+    "nome": "UML e diagramas",
+    "star": "ES7",
+    "root": "ES",
+    "icon": "🧱",
+    "item": ""
+  },
+  {
+    "id": "st-es8",
+    "nome": "Gestão de projetos",
+    "star": "ES8",
+    "root": "ES",
+    "icon": "🧱",
+    "item": ""
+  },
+  {
+    "id": "st-es9",
+    "nome": "Pensamento de produto",
+    "star": "ES9",
+    "root": "ES",
+    "icon": "🧱",
+    "item": ""
+  },
+  {
+    "id": "st-es10",
+    "nome": "Portfólio e GitHub",
+    "star": "ES10",
+    "root": "ES",
+    "icon": "🧱",
+    "item": ""
+  }
+]

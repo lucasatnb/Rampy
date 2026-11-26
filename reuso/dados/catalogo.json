@@ -1,0 +1,1306 @@
+[
+  {
+    "id": "FU1",
+    "nome": "Lógica de programação",
+    "raiz": "FU",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": null
+  },
+  {
+    "id": "FU20",
+    "nome": "Python",
+    "raiz": "FU",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": "FU1"
+  },
+  {
+    "id": "FU2",
+    "nome": "Variáveis e tipos",
+    "raiz": "FU",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": "FU20"
+  },
+  {
+    "id": "FU3",
+    "nome": "Condicionais",
+    "raiz": "FU",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": "FU2"
+  },
+  {
+    "id": "FU4",
+    "nome": "Laços de repetição",
+    "raiz": "FU",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": "FU3"
+  },
+  {
+    "id": "FU5",
+    "nome": "Funções",
+    "raiz": "FU",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": "FU4"
+  },
+  {
+    "id": "FU6",
+    "nome": "Listas e dicionários",
+    "raiz": "FU",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": "FU4"
+  },
+  {
+    "id": "FU7",
+    "nome": "Strings e texto",
+    "raiz": "FU",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "FU2"
+  },
+  {
+    "id": "FU8",
+    "nome": "Arquivos e I/O",
+    "raiz": "FU",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "FU5"
+  },
+  {
+    "id": "FU9",
+    "nome": "Erros e exceções",
+    "raiz": "FU",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "FU5"
+  },
+  {
+    "id": "FU10",
+    "nome": "Orientação a objetos",
+    "raiz": "FU",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "FU5"
+  },
+  {
+    "id": "FU11",
+    "nome": "Algoritmos básicos",
+    "raiz": "FU",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "FU6"
+  },
+  {
+    "id": "FU12",
+    "nome": "Estruturas de dados",
+    "raiz": "FU",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "FU11"
+  },
+  {
+    "id": "FU13",
+    "nome": "Complexidade (Big-O)",
+    "raiz": "FU",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "FU12"
+  },
+  {
+    "id": "FU14",
+    "nome": "Recursão",
+    "raiz": "FU",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "FU5"
+  },
+  {
+    "id": "FU15",
+    "nome": "Terminal (CLI)",
+    "raiz": "FU",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": "FU1"
+  },
+  {
+    "id": "FU16",
+    "nome": "Git e GitHub",
+    "raiz": "FU",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": "FU15"
+  },
+  {
+    "id": "FU17",
+    "nome": "Depuração (debug)",
+    "raiz": "FU",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": "FU9"
+  },
+  {
+    "id": "FU18",
+    "nome": "Ler documentação",
+    "raiz": "FU",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "FU1"
+  },
+  {
+    "id": "FU19",
+    "nome": "Testes automatizados",
+    "raiz": "FU",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "FU9"
+  },
+  {
+    "id": "FE1",
+    "nome": "HTML",
+    "raiz": "FE",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": null
+  },
+  {
+    "id": "FE2",
+    "nome": "CSS",
+    "raiz": "FE",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": "FE1"
+  },
+  {
+    "id": "FE3",
+    "nome": "JavaScript",
+    "raiz": "FE",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": "FE2"
+  },
+  {
+    "id": "FE4",
+    "nome": "DOM e eventos",
+    "raiz": "FE",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": "FE3"
+  },
+  {
+    "id": "FE5",
+    "nome": "Flexbox e Grid",
+    "raiz": "FE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "FE2"
+  },
+  {
+    "id": "FE6",
+    "nome": "Design responsivo",
+    "raiz": "FE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "FE5"
+  },
+  {
+    "id": "FE7",
+    "nome": "Acessibilidade",
+    "raiz": "FE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "FE1"
+  },
+  {
+    "id": "FE8",
+    "nome": "Fetch e APIs",
+    "raiz": "FE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "FE4"
+  },
+  {
+    "id": "FE9",
+    "nome": "TypeScript",
+    "raiz": "FE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "FE3"
+  },
+  {
+    "id": "FE10",
+    "nome": "React",
+    "raiz": "FE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "FE4"
+  },
+  {
+    "id": "FE11",
+    "nome": "Estado e hooks",
+    "raiz": "FE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "FE10"
+  },
+  {
+    "id": "FE12",
+    "nome": "Rotas (SPA)",
+    "raiz": "FE",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "FE10"
+  },
+  {
+    "id": "FE13",
+    "nome": "Tailwind CSS",
+    "raiz": "FE",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "FE5"
+  },
+  {
+    "id": "FE14",
+    "nome": "Next.js e SSR",
+    "raiz": "FE",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "FE12"
+  },
+  {
+    "id": "FE15",
+    "nome": "Vite e bundlers",
+    "raiz": "FE",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "FE3"
+  },
+  {
+    "id": "FE16",
+    "nome": "Testes de front-end",
+    "raiz": "FE",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "FE10"
+  },
+  {
+    "id": "FE17",
+    "nome": "Performance web",
+    "raiz": "FE",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "FE15"
+  },
+  {
+    "id": "FE18",
+    "nome": "UX/UI e Figma",
+    "raiz": "FE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "FE6"
+  },
+  {
+    "id": "FE19",
+    "nome": "Animações",
+    "raiz": "FE",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "FE2"
+  },
+  {
+    "id": "FE20",
+    "nome": "PWA",
+    "raiz": "FE",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "FE17"
+  },
+  {
+    "id": "BE1",
+    "nome": "HTTP e a web",
+    "raiz": "BE",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": null
+  },
+  {
+    "id": "BE2",
+    "nome": "APIs REST",
+    "raiz": "BE",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": "BE1"
+  },
+  {
+    "id": "BE3",
+    "nome": "Flask",
+    "raiz": "BE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "BE1"
+  },
+  {
+    "id": "BE4",
+    "nome": "FastAPI",
+    "raiz": "BE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "BE3"
+  },
+  {
+    "id": "BE5",
+    "nome": "Node.js",
+    "raiz": "BE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "BE1"
+  },
+  {
+    "id": "BE6",
+    "nome": "Express",
+    "raiz": "BE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "BE5"
+  },
+  {
+    "id": "BE7",
+    "nome": "Autenticação",
+    "raiz": "BE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "BE2"
+  },
+  {
+    "id": "BE8",
+    "nome": "JWT e sessões",
+    "raiz": "BE",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "BE7"
+  },
+  {
+    "id": "BE9",
+    "nome": "OAuth",
+    "raiz": "BE",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "BE8"
+  },
+  {
+    "id": "BE10",
+    "nome": "ORM",
+    "raiz": "BE",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "BE3"
+  },
+  {
+    "id": "BE11",
+    "nome": "Validação de dados",
+    "raiz": "BE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "BE2"
+  },
+  {
+    "id": "BE12",
+    "nome": "WebSockets",
+    "raiz": "BE",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "BE2"
+  },
+  {
+    "id": "BE13",
+    "nome": "Filas e tarefas",
+    "raiz": "BE",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "BE12"
+  },
+  {
+    "id": "BE14",
+    "nome": "Cache",
+    "raiz": "BE",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "BE2"
+  },
+  {
+    "id": "BE15",
+    "nome": "Arquitetura em camadas",
+    "raiz": "BE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "BE2"
+  },
+  {
+    "id": "BE16",
+    "nome": "Microsserviços",
+    "raiz": "BE",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "BE15"
+  },
+  {
+    "id": "BE17",
+    "nome": "GraphQL",
+    "raiz": "BE",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "BE2"
+  },
+  {
+    "id": "BE18",
+    "nome": "Webhooks",
+    "raiz": "BE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "BE2"
+  },
+  {
+    "id": "BE19",
+    "nome": "OpenAPI / Swagger",
+    "raiz": "BE",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "BE2"
+  },
+  {
+    "id": "DB1",
+    "nome": "SQL básico",
+    "raiz": "DB",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": null
+  },
+  {
+    "id": "DB2",
+    "nome": "Modelagem relacional",
+    "raiz": "DB",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": "DB1"
+  },
+  {
+    "id": "DB3",
+    "nome": "JOINs",
+    "raiz": "DB",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "DB1"
+  },
+  {
+    "id": "DB4",
+    "nome": "Índices",
+    "raiz": "DB",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "DB3"
+  },
+  {
+    "id": "DB5",
+    "nome": "Transações (ACID)",
+    "raiz": "DB",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "DB3"
+  },
+  {
+    "id": "DB6",
+    "nome": "SQLite",
+    "raiz": "DB",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "DB1"
+  },
+  {
+    "id": "DB7",
+    "nome": "PostgreSQL",
+    "raiz": "DB",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "DB2"
+  },
+  {
+    "id": "DB8",
+    "nome": "MongoDB (NoSQL)",
+    "raiz": "DB",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "DB2"
+  },
+  {
+    "id": "DB9",
+    "nome": "Redis",
+    "raiz": "DB",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "DB8"
+  },
+  {
+    "id": "DB10",
+    "nome": "Migrações",
+    "raiz": "DB",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "DB7"
+  },
+  {
+    "id": "DB11",
+    "nome": "Normalização",
+    "raiz": "DB",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "DB2"
+  },
+  {
+    "id": "DB12",
+    "nome": "Backup e restauração",
+    "raiz": "DB",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "DB7"
+  },
+  {
+    "id": "DB13",
+    "nome": "Bancos vetoriais",
+    "raiz": "DB",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "DB8"
+  },
+  {
+    "id": "DO1",
+    "nome": "Linux",
+    "raiz": "DO",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": null
+  },
+  {
+    "id": "DO2",
+    "nome": "Shell script",
+    "raiz": "DO",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "DO1"
+  },
+  {
+    "id": "DO3",
+    "nome": "Redes (TCP/IP)",
+    "raiz": "DO",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "DO1"
+  },
+  {
+    "id": "DO4",
+    "nome": "Docker",
+    "raiz": "DO",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": "DO1"
+  },
+  {
+    "id": "DO5",
+    "nome": "Docker Compose",
+    "raiz": "DO",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "DO4"
+  },
+  {
+    "id": "DO6",
+    "nome": "CI/CD",
+    "raiz": "DO",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "DO5"
+  },
+  {
+    "id": "DO7",
+    "nome": "GitHub Actions",
+    "raiz": "DO",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "DO6"
+  },
+  {
+    "id": "DO8",
+    "nome": "Nuvem (AWS/GCP)",
+    "raiz": "DO",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "DO3"
+  },
+  {
+    "id": "DO9",
+    "nome": "Deploy",
+    "raiz": "DO",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": "DO8"
+  },
+  {
+    "id": "DO10",
+    "nome": "Nginx",
+    "raiz": "DO",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "DO3"
+  },
+  {
+    "id": "DO11",
+    "nome": "Kubernetes",
+    "raiz": "DO",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "DO5"
+  },
+  {
+    "id": "DO12",
+    "nome": "Terraform (IaC)",
+    "raiz": "DO",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "DO8"
+  },
+  {
+    "id": "DO13",
+    "nome": "Monitoramento",
+    "raiz": "DO",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "DO9"
+  },
+  {
+    "id": "DO14",
+    "nome": "Logs",
+    "raiz": "DO",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "DO13"
+  },
+  {
+    "id": "DO15",
+    "nome": "DNS e HTTPS",
+    "raiz": "DO",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "DO3"
+  },
+  {
+    "id": "DO16",
+    "nome": "Variáveis de ambiente",
+    "raiz": "DO",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "DO9"
+  },
+  {
+    "id": "SE1",
+    "nome": "Princípios (CIA)",
+    "raiz": "SE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": null
+  },
+  {
+    "id": "SE2",
+    "nome": "Senhas e hash",
+    "raiz": "SE",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": "SE1"
+  },
+  {
+    "id": "SE3",
+    "nome": "Criptografia",
+    "raiz": "SE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "SE1"
+  },
+  {
+    "id": "SE4",
+    "nome": "HTTPS / TLS",
+    "raiz": "SE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "SE3"
+  },
+  {
+    "id": "SE5",
+    "nome": "OWASP Top 10",
+    "raiz": "SE",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": "SE1"
+  },
+  {
+    "id": "SE6",
+    "nome": "SQL Injection",
+    "raiz": "SE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "SE5"
+  },
+  {
+    "id": "SE7",
+    "nome": "XSS e CSRF",
+    "raiz": "SE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "SE5"
+  },
+  {
+    "id": "SE8",
+    "nome": "Gestão de segredos",
+    "raiz": "SE",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "SE5"
+  },
+  {
+    "id": "SE9",
+    "nome": "Pentest básico",
+    "raiz": "SE",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "SE5"
+  },
+  {
+    "id": "SE10",
+    "nome": "Hardening de servidor",
+    "raiz": "SE",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "SE4"
+  },
+  {
+    "id": "IA1",
+    "nome": "NumPy",
+    "raiz": "IA",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": null
+  },
+  {
+    "id": "IA2",
+    "nome": "Pandas",
+    "raiz": "IA",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "IA1"
+  },
+  {
+    "id": "IA3",
+    "nome": "Visualização de dados",
+    "raiz": "IA",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "IA2"
+  },
+  {
+    "id": "IA4",
+    "nome": "Estatística",
+    "raiz": "IA",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": null
+  },
+  {
+    "id": "IA5",
+    "nome": "Álgebra linear",
+    "raiz": "IA",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": null
+  },
+  {
+    "id": "IA6",
+    "nome": "scikit-learn",
+    "raiz": "IA",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "IA2"
+  },
+  {
+    "id": "IA7",
+    "nome": "KNN",
+    "raiz": "IA",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "IA6"
+  },
+  {
+    "id": "IA8",
+    "nome": "Avaliação de modelos",
+    "raiz": "IA",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": "IA6"
+  },
+  {
+    "id": "IA9",
+    "nome": "Redes neurais (MLP)",
+    "raiz": "IA",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "IA6"
+  },
+  {
+    "id": "IA10",
+    "nome": "CNN e visão",
+    "raiz": "IA",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "IA9"
+  },
+  {
+    "id": "IA11",
+    "nome": "PyTorch / TensorFlow",
+    "raiz": "IA",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "IA9"
+  },
+  {
+    "id": "IA12",
+    "nome": "NLP",
+    "raiz": "IA",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "IA9"
+  },
+  {
+    "id": "IA13",
+    "nome": "LLMs e prompts",
+    "raiz": "IA",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "IA12"
+  },
+  {
+    "id": "IA14",
+    "nome": "APIs de LLM",
+    "raiz": "IA",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "IA13"
+  },
+  {
+    "id": "IA15",
+    "nome": "RAG",
+    "raiz": "IA",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "IA14"
+  },
+  {
+    "id": "IA16",
+    "nome": "Extração de características",
+    "raiz": "IA",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "IA6"
+  },
+  {
+    "id": "IA17",
+    "nome": "MLOps",
+    "raiz": "IA",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "IA11"
+  },
+  {
+    "id": "MO1",
+    "nome": "Design mobile",
+    "raiz": "MO",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": null
+  },
+  {
+    "id": "MO2",
+    "nome": "Flutter (Dart)",
+    "raiz": "MO",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "MO1"
+  },
+  {
+    "id": "MO3",
+    "nome": "React Native",
+    "raiz": "MO",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "MO1"
+  },
+  {
+    "id": "MO4",
+    "nome": "Android (Kotlin)",
+    "raiz": "MO",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "MO1"
+  },
+  {
+    "id": "MO5",
+    "nome": "Navegação de telas",
+    "raiz": "MO",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "MO2"
+  },
+  {
+    "id": "MO6",
+    "nome": "Consumo de API",
+    "raiz": "MO",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "MO5"
+  },
+  {
+    "id": "MO7",
+    "nome": "Armazenamento local",
+    "raiz": "MO",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "MO5"
+  },
+  {
+    "id": "MO8",
+    "nome": "Publicar na loja",
+    "raiz": "MO",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "MO7"
+  },
+  {
+    "id": "MO9",
+    "nome": "Notificações push",
+    "raiz": "MO",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "MO6"
+  },
+  {
+    "id": "BO1",
+    "nome": "Scripts de automação",
+    "raiz": "BO",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": null
+  },
+  {
+    "id": "BO2",
+    "nome": "Web scraping",
+    "raiz": "BO",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "BO1"
+  },
+  {
+    "id": "BO3",
+    "nome": "Regex",
+    "raiz": "BO",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "BO1"
+  },
+  {
+    "id": "BO4",
+    "nome": "Planilhas (Excel)",
+    "raiz": "BO",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "BO1"
+  },
+  {
+    "id": "BO5",
+    "nome": "Agendamento (cron)",
+    "raiz": "BO",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "BO1"
+  },
+  {
+    "id": "BO6",
+    "nome": "Bots de Discord",
+    "raiz": "BO",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "BO1"
+  },
+  {
+    "id": "BO7",
+    "nome": "Bots de WhatsApp",
+    "raiz": "BO",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "BO6"
+  },
+  {
+    "id": "BO8",
+    "nome": "APIs de mensageria",
+    "raiz": "BO",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "BO7"
+  },
+  {
+    "id": "BO9",
+    "nome": "Streamlit",
+    "raiz": "BO",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "BO1"
+  },
+  {
+    "id": "BO10",
+    "nome": "Interfaces Tkinter",
+    "raiz": "BO",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "BO1"
+  },
+  {
+    "id": "JG1",
+    "nome": "Game loop",
+    "raiz": "JG",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": null
+  },
+  {
+    "id": "JG2",
+    "nome": "Pygame",
+    "raiz": "JG",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "JG1"
+  },
+  {
+    "id": "JG3",
+    "nome": "Sprites e colisão",
+    "raiz": "JG",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "JG2"
+  },
+  {
+    "id": "JG4",
+    "nome": "Física 2D",
+    "raiz": "JG",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "JG3"
+  },
+  {
+    "id": "JG5",
+    "nome": "Godot",
+    "raiz": "JG",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "JG1"
+  },
+  {
+    "id": "JG6",
+    "nome": "Unity (C#)",
+    "raiz": "JG",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "JG1"
+  },
+  {
+    "id": "JG7",
+    "nome": "IA de NPCs",
+    "raiz": "JG",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "JG4"
+  },
+  {
+    "id": "JG8",
+    "nome": "Mods de Minecraft",
+    "raiz": "JG",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "JG1"
+  },
+  {
+    "id": "JG9",
+    "nome": "Game design",
+    "raiz": "JG",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": null
+  },
+  {
+    "id": "JG10",
+    "nome": "Áudio e efeitos",
+    "raiz": "JG",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "JG3"
+  },
+  {
+    "id": "EM1",
+    "nome": "Eletrônica básica",
+    "raiz": "EM",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": null
+  },
+  {
+    "id": "EM2",
+    "nome": "Arduino",
+    "raiz": "EM",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "EM1"
+  },
+  {
+    "id": "EM3",
+    "nome": "C/C++",
+    "raiz": "EM",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "EM2"
+  },
+  {
+    "id": "EM4",
+    "nome": "Sensores e atuadores",
+    "raiz": "EM",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "EM2"
+  },
+  {
+    "id": "EM5",
+    "nome": "ESP32",
+    "raiz": "EM",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "EM4"
+  },
+  {
+    "id": "EM6",
+    "nome": "MQTT",
+    "raiz": "EM",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "EM5"
+  },
+  {
+    "id": "EM7",
+    "nome": "TinyML",
+    "raiz": "EM",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "EM5"
+  },
+  {
+    "id": "EM8",
+    "nome": "I2C e SPI",
+    "raiz": "EM",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "EM4"
+  },
+  {
+    "id": "EM9",
+    "nome": "Raspberry Pi",
+    "raiz": "EM",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "EM1"
+  },
+  {
+    "id": "ES1",
+    "nome": "Código limpo",
+    "raiz": "ES",
+    "nivel": 1,
+    "nivelNome": "essencial",
+    "pai": null
+  },
+  {
+    "id": "ES2",
+    "nome": "Padrões de projeto",
+    "raiz": "ES",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "ES1"
+  },
+  {
+    "id": "ES3",
+    "nome": "Princípios SOLID",
+    "raiz": "ES",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "ES1"
+  },
+  {
+    "id": "ES4",
+    "nome": "Metodologias ágeis",
+    "raiz": "ES",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": null
+  },
+  {
+    "id": "ES5",
+    "nome": "Code review",
+    "raiz": "ES",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "ES1"
+  },
+  {
+    "id": "ES6",
+    "nome": "Documentação técnica",
+    "raiz": "ES",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": null
+  },
+  {
+    "id": "ES7",
+    "nome": "UML e diagramas",
+    "raiz": "ES",
+    "nivel": 3,
+    "nivelNome": "avançada",
+    "pai": "ES6"
+  },
+  {
+    "id": "ES8",
+    "nome": "Gestão de projetos",
+    "raiz": "ES",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "ES4"
+  },
+  {
+    "id": "ES9",
+    "nome": "Pensamento de produto",
+    "raiz": "ES",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "ES4"
+  },
+  {
+    "id": "ES10",
+    "nome": "Portfólio e GitHub",
+    "raiz": "ES",
+    "nivel": 2,
+    "nivelNome": "importante",
+    "pai": "ES6"
+  }
+]
