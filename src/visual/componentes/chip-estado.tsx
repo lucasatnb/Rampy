@@ -6,6 +6,8 @@ const mapa: Record<string, "neutro" | "acao" | "recompensa" | "sucesso" | "erro"
   Concluída: "sucesso",
   Concluído: "sucesso",
   Aprovada: "sucesso",
+  Entregue: "acao",
+  "Em revisão": "erro",
   "Em andamento": "recompensa",
   Rascunho: "recompensa",
   Pendente: "recompensa",

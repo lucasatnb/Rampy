@@ -165,3 +165,4 @@ Concluída · Avançado · Intermediário. Português do Brasil, sem jargão té
   subseções não documentadas (outras abas de Empresa, Notificações etc.) mostram "em preparação".
 - Busca, sino e avatar são visuais (sem API); o gráfico é SVG próprio, sem Recharts.
 - Troca de perfil Gestor/Funcionário no header é recurso de demonstração, não aparece na referência.
+- **Demandas** (menu dos dois perfis) é funcionalidade nova, pedida fora das referências: gestor cria tarefa, colaborador envia entrega com texto e gestor aprova ou pede revisão; estados `Pendente → Entregue → Aprovada | Em revisão`. Sem backend.

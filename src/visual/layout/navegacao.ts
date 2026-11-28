@@ -3,6 +3,7 @@ import {
   BookOpen,
   Building2,
   ClipboardCheck,
+  ClipboardList,
   HelpCircle,
   House,
   Layers,
@@ -20,6 +21,7 @@ export const navegacao: Record<Perfil, ItemNav[]> = {
   gestor: [
     { rotulo: "Início", to: "/gestor", icone: House },
     { rotulo: "Colaboradores", to: "/gestor/colaboradores", icone: Users },
+    { rotulo: "Demandas", to: "/gestor/demandas", icone: ClipboardList },
     { rotulo: "Trilhas", to: "/gestor/trilhas", icone: Layers },
     { rotulo: "Avaliações", to: "/gestor/avaliacoes", icone: ClipboardCheck },
     { rotulo: "Relatórios", to: "/gestor/relatorios", icone: BarChart3 },
@@ -28,6 +30,7 @@ export const navegacao: Record<Perfil, ItemNav[]> = {
   ],
   funcionario: [
     { rotulo: "Início", to: "/funcionario", icone: House },
+    { rotulo: "Minhas Demandas", to: "/funcionario/demandas", icone: ClipboardList },
     { rotulo: "Minhas Trilhas", to: "/funcionario/trilhas", icone: Layers },
     { rotulo: "Biblioteca", to: "/funcionario/biblioteca", icone: BookOpen },
     { rotulo: "Avaliações", to: "/funcionario/avaliacoes", icone: ClipboardCheck },
@@ -42,6 +45,7 @@ export const itensInferiores: ItemNav[] = [
 
 export const rotulosSecao: Record<string, string> = {
   colaboradores: "Colaboradores",
+  demandas: "Demandas",
   trilhas: "Trilhas",
   avaliacoes: "Avaliações",
   relatorios: "Relatórios",

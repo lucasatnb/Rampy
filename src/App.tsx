@@ -6,6 +6,8 @@ import { Biblioteca } from "@/components/paginas/biblioteca";
 import { ColaboradoresGestor } from "@/components/paginas/colaboradores-gestor";
 import { ConteudoGestor } from "@/components/paginas/conteudo-gestor";
 import { Configuracoes } from "@/components/paginas/configuracoes";
+import { DemandasFuncionario } from "@/components/paginas/demandas-funcionario";
+import { DemandasGestor } from "@/components/paginas/demandas-gestor";
 import { EmpresaGestor } from "@/components/paginas/empresa-gestor";
 import { FuncionarioInicio } from "@/components/paginas/funcionario-inicio";
 import { GestorInicio } from "@/components/paginas/gestor-inicio";
@@ -22,6 +24,7 @@ export function App() {
 
         <Route path="/gestor" element={<GestorInicio />} />
         <Route path="/gestor/colaboradores" element={<ColaboradoresGestor />} />
+        <Route path="/gestor/demandas" element={<DemandasGestor />} />
         <Route path="/gestor/trilhas" element={<TrilhasGestor />} />
         <Route path="/gestor/avaliacoes" element={<AvaliacoesGestor />} />
         <Route path="/gestor/relatorios" element={<RelatoriosGestor />} />
@@ -31,6 +34,7 @@ export function App() {
         <Route path="/gestor/configuracoes" element={<Configuracoes perfil="gestor" />} />
 
         <Route path="/funcionario" element={<FuncionarioInicio />} />
+        <Route path="/funcionario/demandas" element={<DemandasFuncionario />} />
         <Route path="/funcionario/trilhas" element={<MinhasTrilhas />} />
         <Route path="/funcionario/biblioteca" element={<Biblioteca />} />
         <Route path="/funcionario/avaliacoes" element={<AvaliacoesFuncionario />} />

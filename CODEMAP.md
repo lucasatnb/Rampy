@@ -17,8 +17,9 @@ modelados nas próximas sessões.
 - `src/visual/marca.tsx`: marca centralizada (placeholder em Sora + seta até chegar o logo claro).
 - `src/visual/layout/`: `app-shell.tsx`, `sidebar.tsx`, `cabecalho.tsx`, `troca-perfil.tsx`, `navegacao.ts` — casca, menu, busca visual, sino, avatar e troca de perfil.
 - `src/visual/componentes/`: `cabecalho-pagina`, `cartao`, `cartao-kpi`, `cartao-tabela`, `progresso`, `grafico-evolucao` (SVG, sem Recharts), `filtros`, `chip-estado`, `donut`, `estado-vazio`, `pagina-interna`.
-- `src/visual/paginas/`: inícios do gestor/funcionário e telas internas — gestor: `colaboradores-gestor`, `trilhas-gestor`, `avaliacoes-gestor`, `relatorios-gestor`, `conteudo-gestor`, `empresa-gestor`; funcionário: `minhas-trilhas`, `biblioteca`, `avaliacoes-funcionario`, `meu-perfil`; comuns: `ajuda`, `configuracoes`, `em-breve` (reserva).
+- `src/visual/paginas/`: inícios do gestor/funcionário e telas internas — gestor: `colaboradores-gestor`, `demandas-gestor`, `trilhas-gestor`, `avaliacoes-gestor`, `relatorios-gestor`, `conteudo-gestor`, `empresa-gestor`; funcionário: `demandas-funcionario`, `minhas-trilhas`, `biblioteca`, `avaliacoes-funcionario`, `meu-perfil`; comuns: `ajuda`, `configuracoes`, `em-breve` (reserva).
 - `src/dados/`: `gestor.ts`, `funcionario.ts`, `gestor-internas.ts` e `funcionario-internas.ts` — dados de exemplo estáticos, sem API.
+- `src/dados/demandas.ts`: store do fluxo de demandas (gestor cria → colaborador entrega → gestor aprova ou pede revisão). Persiste em `localStorage.rampy_demandas`; sem backend. `useDemandas()` usa `useSyncExternalStore`.
 - `src/visual/chip.tsx`: etiquetas de status e categoria.
 - `src/visual/campo.ts`: campo visual reutilizável.
 - `src/visual/tela.tsx`: estrutura de tela e estatísticas.
