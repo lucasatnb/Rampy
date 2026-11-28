@@ -90,11 +90,13 @@ export function Cabecalho({
           <DropdownMenuContent align="end" className="w-52">
             <DropdownMenuLabel>Lucas Souza</DropdownMenuLabel>
             <DropdownMenuSeparator />
+            {perfil === "funcionario" ? (
+              <DropdownMenuItem asChild>
+                <NavLink to="/funcionario/perfil">Meu Perfil</NavLink>
+              </DropdownMenuItem>
+            ) : null}
             <DropdownMenuItem asChild>
-              <NavLink to="/funcionario/perfil">Meu Perfil</NavLink>
-            </DropdownMenuItem>
-            <DropdownMenuItem asChild>
-              <NavLink to="/configuracoes">Configurações</NavLink>
+              <NavLink to={`/${perfil}/configuracoes`}>Configurações</NavLink>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

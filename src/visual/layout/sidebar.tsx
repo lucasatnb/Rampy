@@ -56,7 +56,7 @@ export function Sidebar({
         {itensInferiores.map((item) => (
           <NavLink
             key={item.to}
-            to={item.to}
+            to={`/${perfil}${item.to}`}
             onClick={aoNavegar}
             className={classeItem}
           >

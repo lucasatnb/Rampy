@@ -161,7 +161,7 @@ Concluída · Avançado · Intermediário. Português do Brasil, sem jargão té
 - Versão **clara** do logo não veio no pacote (só "Logo Rampy em Modo Escuro.png"): precisar
   do arquivo claro ou autorização para recolorir o wordmark.
 - Cores de erro/aviso/info e estados vazios são propostas, não observadas nas referências.
-- As telas implementadas são só os **inícios** do gestor e do funcionário; as demais seções
-  do menu mostram um estado "Em breve".
+- Todas as seções do menu têm tela própria, com os textos e números lidos das referências;
+  subseções não documentadas (outras abas de Empresa, Notificações etc.) mostram "em preparação".
 - Busca, sino e avatar são visuais (sem API); o gráfico é SVG próprio, sem Recharts.
 - Troca de perfil Gestor/Funcionário no header é recurso de demonstração, não aparece na referência.
