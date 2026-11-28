@@ -8,8 +8,11 @@ modelados nas próximas sessões.
 
 ## Base ativa
 
-- `DESIGN.md`: fonte da verdade visual (tema claro, ciano, pills). Vem de `referencias/`; substitui os tokens escuros do `reuso/`.
-- `src/visual/estilos.css`: tokens, tipografia, Tailwind e tema visual reutilizável. Ainda com o tema antigo; converter para o `DESIGN.md`.
+- `DESIGN.md`: fonte da verdade visual (tema claro e escuro, ciano, pills). Vem de `referencias/`; substitui os tokens escuros do `reuso/`.
+- `src/visual/estilos.css`: tokens claros + bloco `.dark`, tipografia e Tailwind, convertidos para o `DESIGN.md`.
+- `src/visual/alternador-tema.tsx`: botão de tema; persiste em `localStorage` (`rampy_tema`).
+- `wrangler.jsonc`: deploy Workers + Assets estáticos de `dist`, com fallback SPA. Sem Worker/API ainda.
+- `.github/workflows/deploy.yml`: `npm ci` + build + `wrangler deploy` na `main`, via secrets `CLOUDFLARE_API_TOKEN` e `CLOUDFLARE_ACCOUNT_ID`.
 - `src/visual/ui/`: Button, Card, Sheet, Skeleton, Sonner + Badge, Tabs, Input, Avatar, Progress, Table, Dropdown-menu (shadcn CLI).
 - `src/visual/chip.tsx`: etiquetas de status e categoria.
 - `src/visual/campo.ts`: campo visual reutilizável.
