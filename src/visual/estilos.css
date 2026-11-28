@@ -13,12 +13,15 @@
   --bg: #f7fafb;
   --bg-glow: #d6fbfa;
   --surface: #ffffff;
+  --sidebar: #ffffff;
+  --surface-raised: #f7fafb;
   --text: #0b1b21;
   --text-dim: #5f7077;
   --text-faint: #9aa9af;
   --primary: #22d3d8;
   --primary-soft: #e4fafb;
   --primary-fg: #06302f;
+  --primary-on-soft: #06302f;
   --success: #22c55e;
   --success-soft: #e7f8ee;
   --warning: #e0a11b;
@@ -45,7 +48,7 @@
   --muted: var(--surface);
   --muted-foreground: var(--text-dim);
   --accent: var(--primary-soft);
-  --accent-foreground: var(--text);
+  --accent-foreground: var(--primary-on-soft);
   --destructive: var(--error);
   --destructive-foreground: #ffffff;
   --input: var(--border);
@@ -62,6 +65,36 @@
   --row-h: 3.375rem;
 }
 
+/* DESIGN.md — tema escuro (f02/f10 + logo). Sem glow: separação por níveis de luminosidade. */
+.dark {
+  color-scheme: dark;
+
+  --bg: #1b1c21;
+  --bg-glow: transparent;
+  --surface: #2d2e33;
+  --sidebar: #232429;
+  --surface-raised: #35363b;
+  --text: #ffffff;
+  --text-dim: #b2b3b8;
+  --text-faint: #8a8d94;
+  --primary: #00ebff;
+  --primary-soft: #0e5262;
+  --primary-fg: #01333b;
+  --primary-on-soft: #c8ebf6;
+  --success: #34d399;
+  --success-soft: #10352a;
+  --warning: #fbbf24;
+  --warning-soft: #3a2e12;
+  --info: #60a5fa;
+  --info-soft: #16263d;
+  --error: #f87171;
+  --error-soft: #3b1a1e;
+  --border: #36373c;
+  --divider: #2a2b30;
+  --track: #424348;
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
 @theme inline {
   --font-sans: "Inter Variable", "Inter", system-ui, sans-serif;
   --font-display: "Sora Variable", "Sora", system-ui, sans-serif;
@@ -70,12 +103,15 @@
   --color-bg: var(--bg);
   --color-bg-glow: var(--bg-glow);
   --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-sidebar: var(--sidebar);
   --color-text: var(--text);
   --color-text-dim: var(--text-dim);
   --color-text-faint: var(--text-faint);
   --color-primary: var(--primary);
   --color-primary-soft: var(--primary-soft);
   --color-primary-fg: var(--primary-fg);
+  --color-primary-on-soft: var(--primary-on-soft);
   --color-success: var(--success);
   --color-success-soft: var(--success-soft);
   --color-warning: var(--warning);
@@ -149,7 +185,7 @@
 
   ::selection {
     background: var(--primary-soft);
-    color: var(--primary-fg);
+    color: var(--primary-on-soft);
   }
 
   :focus-visible {

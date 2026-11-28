@@ -50,7 +50,44 @@ Mapeamento shadcn (via `cssVariables`): `--background: var(--bg)`, `--foreground
 `--accent-foreground: var(--text)`, `--secondary: var(--bg)`, `--destructive: var(--error)`,
 `--input: var(--border)`, `--ring: var(--primary)`.
 
-## 3. Tipografia
+## 3. Tema escuro
+
+Ativado pela classe `.dark` no `<html>` — o `@custom-variant dark` do Tailwind já segue esse
+padrão. Fonte: f02/f10 (a mesma montagem, metade direita) e o logo em modo escuro; as outras
+11 imagens do pacote são claras. Ainda não há alternador de tema na UI.
+
+- Fundo liso `#1B1C21`: a mancha ciano do tema claro **desaparece**.
+- Quatro níveis de luminosidade substituem as sombras: página `#1B1C21` → sidebar `#232429`
+  → card `#2D2E33` → elevado/busca `#35363B`. Separador é a borda 1px `#36373C`, divisor
+  interno `#2A2B30`. **Sem glow** ao redor do ciano.
+- Ciano da interface no escuro é `#00EBFF`. O logo usa `#00CFCF` — não usar esse na UI.
+- Botão primário chapado, texto `#01333B`; item ativo da sidebar em `#0E5262` com texto
+  `#C8EBF6`. Densidade, raios e tipografia são **iguais** ao tema claro.
+
+| Token | Escuro | Origem |
+|---|---|---|
+| `--bg` | `#1B1C21` | observado |
+| `--bg-glow` | `transparent` | observado (sem mancha) |
+| `--surface` | `#2D2E33` | observado |
+| `--sidebar` | `#232429` | observado |
+| `--surface-raised` | `#35363B` | observado (busca) |
+| `--text` | `#FFFFFF` | observado |
+| `--text-dim` | `#B2B3B8` | observado |
+| `--text-faint` | `#8A8D94` | proposto |
+| `--primary` | `#00EBFF` | observado |
+| `--primary-soft` | `#0E5262` | observado |
+| `--primary-fg` | `#01333B` | observado |
+| `--primary-on-soft` | `#C8EBF6` | observado |
+| `--success` / `--success-soft` | `#34D399` / `#10352A` | proposto |
+| `--warning` / `--warning-soft` | `#FBBF24` / `#3A2E12` | proposto |
+| `--info` / `--info-soft` | `#60A5FA` / `#16263D` | proposto |
+| `--error` / `--error-soft` | `#F87171` / `#3B1A1E` | proposto |
+| `--border` | `#36373C` | observado |
+| `--divider` | `#2A2B30` | observado |
+| `--track` | `#424348` | observado |
+| `--shadow-card` | `0 1px 2px rgba(0,0,0,.45)` | proposto (quase invisível) |
+
+## 4. Tipografia
 
 Família da referência é sans geométrica arredondada (Poppins / Plus Jakarta Sans). **Não
 instalar fonte nova sem aprovação**: usar `Sora Variable` para títulos/KPIs e `Inter Variable`
@@ -66,7 +103,7 @@ para corpo (já no `package.json`). A script do logo vem do arquivo, não de fon
 | Rótulo / cabeçalho de tabela | 12px / 500–600 | `--text-dim` |
 | Número de KPI | 28–32px / 700 | `--text` |
 
-## 4. Geometria e densidade
+## 5. Geometria e densidade
 
 - Raios: card 16px, quadrado de ícone 12px, drawer 24px nos cantos esquerdos,
   botões/chips/abas/campo de busca **pill** (9999px).
@@ -77,7 +114,7 @@ para corpo (já no `package.json`). A script do logo vem do arquivo, não de fon
 - Grid: 4 KPIs por linha (gap 16px); abaixo, duas colunas ~60/40 (gráfico + lista lateral).
 - Densidade: arejada nos cards, compacta nas tabelas.
 
-## 5. Componentes
+## 6. Componentes
 
 - **Botão primário**: pill ciano, texto `--primary-fg`, ícone à esquerda. **Um por tela**.
 - **Botão secundário**: pill branco, borda 1px, texto escuro. Terciário: pill claro com seta.
@@ -96,7 +133,7 @@ para corpo (já no `package.json`). A script do logo vem do arquivo, não de fon
 - **Estados vazios e de erro**: não aparecem na referência. Definir com ilustração simples,
   texto curto e **um** botão primário; erro inline, sem punição.
 
-## 6. Navegação e vocabulário
+## 7. Navegação e vocabulário
 
 | | Gestor | Funcionário |
 |---|---|---|
@@ -109,7 +146,7 @@ Conquistas · Sequência de estudos · Banco de questões · Visão geral da emp
 Atribuir trilha · Definir metas · Enviar mensagem · Rascunho · Ativa · Em andamento ·
 Concluída · Avançado · Intermediário. Português do Brasil, sem jargão técnico.
 
-## 7. Acessibilidade
+## 8. Acessibilidade
 
 - Contraste ≥4,5:1 para texto (`--text-dim` foi escurecido; `--text-faint` nunca é corpo).
 - Alvos tocáveis ≥44px, inclusive nos pills e no checkbox da tabela.
@@ -117,9 +154,10 @@ Concluída · Avançado · Intermediário. Português do Brasil, sem jargão té
 - `prefers-reduced-motion`: animações de entrada e gráficos viram estado estático.
 - Referência usa 11px em eyebrow; aqui o mínimo é **12px**. Texto de corpo nunca abaixo de 14px.
 
-## 8. Pendências
+## 9. Pendências
 
 - Versão **clara** do logo não veio no pacote (só "Logo Rampy em Modo Escuro.png"): precisar
   do arquivo claro ou autorização para recolorir o wordmark.
-- Cor de erro e estados vazios/erro são propostas, não observadas na referência.
-- `src/visual/estilos.css` ainda traz o tema escuro antigo: precisa ser convertido para estes tokens.
+- Alternador de tema: os tokens `.dark` existem, mas falta botão e persistência da escolha.
+- Cores de erro/aviso/info e estados vazios são propostas, não observadas nas referências.
+- Nenhuma tela de gestor/funcionário implementada ainda; `App.tsx` segue com placeholder.
