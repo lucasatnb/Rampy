@@ -36,10 +36,10 @@ sem partículas.
 | `--primary` | `#22D3D8` | acento, barras, links, item ativo |
 | `--primary-soft` | `#E4FAFB` | fundo de item ativo, quadrado de ícone, aba ativa |
 | `--primary-fg` | `#06302F` | texto sobre ciano |
-| `--success` / `--success-soft` | `#22C55E` / `#E7F8EE` | Ativa, Concluída, Avançado, Ativo |
-| `--warning` / `--warning-soft` | `#E0A11B` / `#FFF4DE` | Rascunho, Em andamento |
-| `--info` / `--info-soft` | `#3A7BD5` / `#E9F1FE` | Intermediário |
-| `--error` / `--error-soft` | `#DC2626` / `#FEECEC` | **proposto** — não aparece na referência |
+| `--success` / `--success-soft` / `--success-fg` | `#22C55E` / `#E7F8EE` / `#166534` | Ativa, Concluída, Avançado, Ativo |
+| `--warning` / `--warning-soft` / `--warning-fg` | `#E0A11B` / `#FFF4DE` / `#92400E` | Rascunho, Em andamento |
+| `--info` / `--info-soft` / `--info-fg` | `#3A7BD5` / `#E9F1FE` / `#1E40AF` | Intermediário |
+| `--error` / `--error-soft` / `--error-fg` | `#DC2626` / `#FEECEC` / `#B91C1C` | **proposto** — não aparece na referência |
 | `--border` | `#E6ECEF` | borda de cards, inputs, botões secundários |
 | `--divider` | `#EFF3F5` | linhas de tabela e lista |
 | `--track` | `#EAF0F2` | trilha das barras de progresso |
@@ -53,8 +53,10 @@ Mapeamento shadcn (via `cssVariables`): `--background: var(--bg)`, `--foreground
 ## 3. Tema escuro
 
 Ativado pela classe `.dark` no `<html>` — o `@custom-variant dark` do Tailwind já segue esse
-padrão. Fonte: f02/f10 (a mesma montagem, metade direita) e o logo em modo escuro; as outras
-11 imagens do pacote são claras. Ainda não há alternador de tema na UI.
+padrão. O alternador em `src/visual/alternador-tema.tsx` salva a escolha em `localStorage`
+(`rampy_tema`); sem escolha, segue `prefers-color-scheme`. Um script em `index.html` aplica a
+classe antes do React montar, evitando flash. Fonte: f02/f10 (a mesma montagem, metade direita)
+e o logo em modo escuro; as outras 11 imagens do pacote são claras.
 
 - Fundo liso `#1B1C21`: a mancha ciano do tema claro **desaparece**.
 - Quatro níveis de luminosidade substituem as sombras: página `#1B1C21` → sidebar `#232429`
@@ -78,10 +80,10 @@ padrão. Fonte: f02/f10 (a mesma montagem, metade direita) e o logo em modo escu
 | `--primary-soft` | `#0E5262` | observado |
 | `--primary-fg` | `#01333B` | observado |
 | `--primary-on-soft` | `#C8EBF6` | observado |
-| `--success` / `--success-soft` | `#34D399` / `#10352A` | proposto |
-| `--warning` / `--warning-soft` | `#FBBF24` / `#3A2E12` | proposto |
-| `--info` / `--info-soft` | `#60A5FA` / `#16263D` | proposto |
-| `--error` / `--error-soft` | `#F87171` / `#3B1A1E` | proposto |
+| `--success` / `--success-soft` / `--success-fg` | `#34D399` / `#10352A` / `#6EE7B7` | proposto |
+| `--warning` / `--warning-soft` / `--warning-fg` | `#FBBF24` / `#3A2E12` / `#FDE68A` | proposto |
+| `--info` / `--info-soft` / `--info-fg` | `#60A5FA` / `#16263D` / `#93C5FD` | proposto |
+| `--error` / `--error-soft` / `--error-fg` | `#F87171` / `#3B1A1E` / `#FCA5A5` | proposto |
 | `--border` | `#36373C` | observado |
 | `--divider` | `#2A2B30` | observado |
 | `--track` | `#424348` | observado |
@@ -158,6 +160,5 @@ Concluída · Avançado · Intermediário. Português do Brasil, sem jargão té
 
 - Versão **clara** do logo não veio no pacote (só "Logo Rampy em Modo Escuro.png"): precisar
   do arquivo claro ou autorização para recolorir o wordmark.
-- Alternador de tema: os tokens `.dark` existem, mas falta botão e persistência da escolha.
 - Cores de erro/aviso/info e estados vazios são propostas, não observadas nas referências.
 - Nenhuma tela de gestor/funcionário implementada ainda; `App.tsx` segue com placeholder.

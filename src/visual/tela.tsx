@@ -24,7 +24,7 @@ export function Cabecalho({
   return (
     <header className="mb-6 flex flex-wrap items-start justify-between gap-4 md:mb-8">
       <div className="max-w-[62ch]">
-        <p className="mb-2 font-display text-sm font-semibold tracking-[0.18em] text-action-accent uppercase">
+        <p className="mb-2 font-display text-sm font-semibold tracking-[0.18em] text-primary-on-soft uppercase">
           {sobretitulo}
         </p>
         <h1 className="text-[28px] font-semibold text-text md:text-[34px]">{titulo}</h1>
@@ -51,11 +51,11 @@ export function EstadoVazio({
   return (
     <Card
       className={cn(
-        "flex flex-col items-center gap-3 rounded-card border-border bg-surface-1/80 px-6 py-10 text-center",
+        "flex flex-col items-center gap-3 rounded-card border-border bg-surface px-6 py-10 text-center",
         className,
       )}
     >
-      <span className="grid size-12 place-items-center rounded-full border border-action/30 bg-action/10 text-action-accent">
+      <span className="grid size-12 place-items-center rounded-full border border-primary/30 bg-primary-soft text-primary-on-soft">
         <Icone className="size-5" />
       </span>
       <h2 className="font-display text-xl font-semibold text-text">{titulo}</h2>
@@ -75,12 +75,12 @@ export function LinhaEstatistica({
   icone: ComponentType<{ className?: string }>;
 }) {
   return (
-    <div className="flex items-center gap-2 rounded-md border border-border bg-surface-2/60 px-2 py-3 sm:gap-3 sm:px-3">
-      <span className="hidden size-9 shrink-0 place-items-center rounded-full bg-surface-3 text-action-accent sm:grid">
+    <div className="flex items-center gap-2 rounded-md border border-border bg-surface-raised px-2 py-3 sm:gap-3 sm:px-3">
+      <span className="hidden size-9 shrink-0 place-items-center rounded-full bg-primary-soft text-primary-on-soft sm:grid">
         <Icone className="size-4" />
       </span>
       <div className="min-w-0">
-        <p className="truncate text-sm tracking-wide text-text-faint uppercase">{rotulo}</p>
+        <p className="truncate text-sm tracking-wide text-text-dim uppercase">{rotulo}</p>
         <p className="font-display text-lg font-semibold text-text">{valor}</p>
       </div>
     </div>

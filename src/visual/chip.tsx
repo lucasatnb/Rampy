@@ -7,11 +7,11 @@ const chipVariants = cva(
   {
     variants: {
       variant: {
-        neutro: "border-border bg-surface-2/80 text-text-dim",
-        acao: "border-action/40 bg-action/15 text-action-accent",
-        recompensa: "border-reward/35 bg-reward/10 text-reward",
-        sucesso: "border-success/30 bg-success/10 text-success",
-        erro: "border-error/30 bg-error/10 text-error",
+        neutro: "border-border bg-surface-raised text-text-dim",
+        acao: "border-primary/40 bg-primary-soft text-primary-on-soft",
+        recompensa: "border-warning/35 bg-warning-soft text-warning-fg",
+        sucesso: "border-success/30 bg-success-soft text-success-fg",
+        erro: "border-error/30 bg-error-soft text-error-fg",
       },
     },
     defaultVariants: { variant: "neutro" },
