@@ -8,8 +8,9 @@ modelados nas próximas sessões.
 
 ## Base ativa
 
-- `src/visual/estilos.css`: tokens, tipografia, Tailwind e tema visual reutilizável.
-- `src/visual/ui/`: Button, Card, Sheet, Skeleton e Sonner.
+- `DESIGN.md`: fonte da verdade visual (tema claro, ciano, pills). Vem de `referencias/`; substitui os tokens escuros do `reuso/`.
+- `src/visual/estilos.css`: tokens, tipografia, Tailwind e tema visual reutilizável. Ainda com o tema antigo; converter para o `DESIGN.md`.
+- `src/visual/ui/`: Button, Card, Sheet, Skeleton, Sonner + Badge, Tabs, Input, Avatar, Progress, Table, Dropdown-menu (shadcn CLI).
 - `src/visual/chip.tsx`: etiquetas de status e categoria.
 - `src/visual/campo.ts`: campo visual reutilizável.
 - `src/visual/tela.tsx`: estrutura de tela e estatísticas.

@@ -7,64 +7,59 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 
-  /* DESIGN.md — cores */
-  --bg: #05050d;
-  --surface-1: #0b0918;
-  --surface-2: #120f22;
-  --surface-3: #1a1430;
-  --border: rgba(255, 255, 255, 0.09);
-  --text: #ece9fb;
-  --text-dim: #9a93bd;
-  --text-faint: #8f88b3;
-  --action: #6b4bec;
-  --action-accent: #9b82ff;
-  --reward: #ffd700;
-  --reward-soft: #ffe680;
-  --glow: #fff2c0;
-  --success: #4ade80;
-  --error: #fb7185;
-  --warn: #ffb27a;
+  /* DESIGN.md — tema claro */
+  --bg: #f7fafb;
+  --bg-glow: #d6fbfa;
+  --surface: #ffffff;
+  --text: #0b1b21;
+  --text-dim: #5f7077;
+  --text-faint: #9aa9af;
+  --primary: #22d3d8;
+  --primary-soft: #e4fafb;
+  --primary-fg: #06302f;
+  --success: #22c55e;
+  --success-soft: #e7f8ee;
+  --warning: #e0a11b;
+  --warning-soft: #fff4de;
+  --info: #3a7bd5;
+  --info-soft: #e9f1fe;
+  --error: #dc2626;
+  --error-soft: #feecec;
+  --border: #e6ecef;
+  --divider: #eff3f5;
+  --track: #eaf0f2;
+  --shadow-card: 0 1px 2px rgba(11, 27, 33, 0.04), 0 8px 24px rgba(11, 27, 33, 0.05);
 
   /* shadcn/ui — tudo aponta para os tokens acima */
   --background: var(--bg);
   --foreground: var(--text);
-  --card: var(--surface-1);
+  --card: var(--surface);
   --card-foreground: var(--text);
-  --popover: var(--surface-2);
+  --popover: var(--surface);
   --popover-foreground: var(--text);
-  --primary: var(--action);
-  --primary-foreground: #ffffff;
-  --secondary: var(--surface-3);
+  --primary-foreground: var(--primary-fg);
+  --secondary: var(--bg);
   --secondary-foreground: var(--text);
-  --muted: var(--surface-2);
+  --muted: var(--surface);
   --muted-foreground: var(--text-dim);
-  --accent: var(--surface-3);
+  --accent: var(--primary-soft);
   --accent-foreground: var(--text);
   --destructive: var(--error);
-  --destructive-foreground: var(--bg);
-  --input: rgba(255, 255, 255, 0.12);
-  --ring: var(--reward);
+  --destructive-foreground: #ffffff;
+  --input: var(--border);
+  --ring: var(--primary);
 
-  /* DESIGN.md — raios 12 / 16 / 24 */
-  --radius: 0.75rem;
+  /* DESIGN.md — raios e medidas */
+  --radius: 1rem;
   --radius-card: 1rem;
+  --radius-icon: 0.75rem;
   --radius-sheet: 1.5rem;
-
-  /* constelações (selos e ícones; nunca botão) */
-  --const-fu: #ffd666;
-  --const-fe: #78c8ff;
-  --const-mo: #ff82ff;
-  --const-be: #ff8c78;
-  --const-db: #6ee6c8;
-  --const-do: #ffaa50;
-  --const-se: #ff78aa;
-  --const-em: #d7ff78;
-  --const-ia: #be96ff;
-  --const-bo: #ffcda0;
-  --const-jg: #8c96ff;
-  --const-es: #f0f0f0;
+  --radius-pill: 9999px;
+  --header-h: 4rem;
+  --sidebar-w: 13.75rem;
+  --row-h: 3.375rem;
 }
 
 @theme inline {
@@ -73,20 +68,25 @@
   --font-mono: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, monospace;
 
   --color-bg: var(--bg);
-  --color-surface-1: var(--surface-1);
-  --color-surface-2: var(--surface-2);
-  --color-surface-3: var(--surface-3);
+  --color-bg-glow: var(--bg-glow);
+  --color-surface: var(--surface);
   --color-text: var(--text);
   --color-text-dim: var(--text-dim);
   --color-text-faint: var(--text-faint);
-  --color-action: var(--action);
-  --color-action-accent: var(--action-accent);
-  --color-reward: var(--reward);
-  --color-reward-soft: var(--reward-soft);
-  --color-glow: var(--glow);
+  --color-primary: var(--primary);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-fg: var(--primary-fg);
   --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
   --color-error: var(--error);
-  --color-warn: var(--warn);
+  --color-error-soft: var(--error-soft);
+  --color-border: var(--border);
+  --color-divider: var(--divider);
+  --color-track: var(--track);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -94,7 +94,6 @@
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -104,7 +103,6 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
 
@@ -113,20 +111,9 @@
   --radius-lg: 1.5rem;
   --radius-xl: 2rem;
   --radius-card: 1rem;
+  --radius-icon: 0.75rem;
   --radius-sheet: 1.5rem;
-
-  --color-const-fu: var(--const-fu);
-  --color-const-fe: var(--const-fe);
-  --color-const-mo: var(--const-mo);
-  --color-const-be: var(--const-be);
-  --color-const-db: var(--const-db);
-  --color-const-do: var(--const-do);
-  --color-const-se: var(--const-se);
-  --color-const-em: var(--const-em);
-  --color-const-ia: var(--const-ia);
-  --color-const-bo: var(--const-bo);
-  --color-const-jg: var(--const-jg);
-  --color-const-es: var(--const-es);
+  --radius-pill: 9999px;
 }
 
 @layer base {
@@ -161,12 +148,12 @@
   }
 
   ::selection {
-    background: var(--action);
-    color: #ffffff;
+    background: var(--primary-soft);
+    color: var(--primary-fg);
   }
 
   :focus-visible {
-    outline: 2px solid var(--reward);
+    outline: 2px solid var(--primary);
     outline-offset: 3px;
     border-radius: 4px;
   }
@@ -176,88 +163,33 @@
     height: 10px;
   }
   ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.12);
+    background: var(--border);
     border-radius: 999px;
   }
 }
 
-/* Céu: gradiente violeta/dourado + campo de estrelas sutil (só CSS). */
+/* DESIGN.md: só um brilho ciano difuso no topo-direito. Sem estrelas ou partículas. */
 .ceu {
   position: fixed;
   inset: 0;
   z-index: -1;
-  overflow: hidden;
-  background:
-    radial-gradient(60% 48% at 8% 0%, rgba(107, 75, 236, 0.2), transparent 62%),
-    radial-gradient(34% 28% at 94% 6%, rgba(255, 215, 0, 0.08), transparent 70%),
-    var(--bg);
-}
-
-.ceu::before,
-.ceu::after {
-  content: "";
-  position: absolute;
-  inset: -20%;
   pointer-events: none;
-  background-repeat: repeat;
-  background-size: 340px 340px;
-}
-
-.ceu::before {
-  opacity: 0.42;
-  background-image:
-    radial-gradient(1px 1px at 20px 30px, #ffffff, transparent),
-    radial-gradient(1px 1px at 120px 80px, #ffffff, transparent),
-    radial-gradient(1.5px 1.5px at 250px 40px, #ffe680, transparent),
-    radial-gradient(1px 1px at 80px 210px, #ffffff, transparent),
-    radial-gradient(1px 1px at 190px 170px, #ffffff, transparent),
-    radial-gradient(1.5px 1.5px at 300px 250px, #ffffff, transparent),
-    radial-gradient(1px 1px at 40px 300px, #9b82ff, transparent),
-    radial-gradient(1px 1px at 220px 310px, #ffffff, transparent);
-}
-
-.ceu::after {
-  inset: 0;
-  opacity: 0.25;
-  animation: piscar 9s ease-in-out infinite alternate;
-  background-image:
-    radial-gradient(1px 1px at 15% 65%, #ffffff, transparent),
-    radial-gradient(1px 1px at 70% 22%, #ffe680, transparent),
-    radial-gradient(1.5px 1.5px at 88% 72%, #ffffff, transparent),
-    radial-gradient(1px 1px at 42% 88%, #ffffff, transparent),
-    radial-gradient(1px 1px at 58% 48%, #9b82ff, transparent);
-}
-
-@keyframes piscar {
-  from {
-    opacity: 0.25;
-  }
-  to {
-    opacity: 0.55;
-  }
+  background: radial-gradient(46% 34% at 96% 2%, var(--bg-glow), transparent 72%);
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-  .ceu::after {
-    animation: none;
-    opacity: 0.3;
-  }
 }
 
-/* Vidro só onde o DESIGN permite: barras e sheets. */
+/* DESIGN.md: superfície translúcida só em barras e sheets. */
 .vidro {
-  background: color-mix(in srgb, var(--surface-1) 76%, transparent);
-  backdrop-filter: blur(18px) saturate(1.15);
-  -webkit-backdrop-filter: blur(18px) saturate(1.15);
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
-.brilho-acao {
-  box-shadow: 0 0 0 1px rgba(155, 130, 255, 0.25), 0 10px 36px -12px rgba(107, 75, 236, 0.7);
-}
-
-.brilho-estrela {
-  box-shadow: 0 0 28px -4px rgba(255, 215, 0, 0.45);
+.sombra-card {
+  box-shadow: var(--shadow-card);
 }
