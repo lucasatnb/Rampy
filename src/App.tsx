@@ -1,16 +1,21 @@
-import { Chip } from "@/components/chip";
-import { AlternadorTema } from "@/components/alternador-tema";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { EmBreve } from "@/components/paginas/em-breve";
+import { FuncionarioInicio } from "@/components/paginas/funcionario-inicio";
+import { GestorInicio } from "@/components/paginas/gestor-inicio";
 
 export function App() {
   return (
-    <main className="min-h-dvh bg-bg p-6 text-text">
-      <header className="mx-auto flex max-w-5xl items-center justify-between gap-4">
-        <h1 className="text-2xl font-semibold">Rampy</h1>
-        <AlternadorTema />
-      </header>
-      <div className="mx-auto mt-6 max-w-5xl">
-        <Chip>Base pronta</Chip>
-      </div>
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navigate to="/gestor" replace />} />
+        <Route path="/gestor" element={<GestorInicio />} />
+        <Route path="/gestor/:secao" element={<EmBreve perfil="gestor" />} />
+        <Route path="/funcionario" element={<FuncionarioInicio />} />
+        <Route path="/funcionario/:secao" element={<EmBreve perfil="funcionario" />} />
+        <Route path="/ajuda" element={<EmBreve perfil="gestor" />} />
+        <Route path="/configuracoes" element={<EmBreve perfil="gestor" />} />
+        <Route path="*" element={<Navigate to="/gestor" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

@@ -14,11 +14,16 @@ modelados nas próximas sessões.
 - `wrangler.jsonc`: deploy Workers + Assets estáticos de `dist`, com fallback SPA. Sem Worker/API ainda.
 - `.github/workflows/deploy.yml`: `npm ci` + build + `wrangler deploy` na `main`, via secrets `CLOUDFLARE_API_TOKEN` e `CLOUDFLARE_ACCOUNT_ID`.
 - `src/visual/ui/`: Button, Card, Sheet, Skeleton, Sonner + Badge, Tabs, Input, Avatar, Progress, Table, Dropdown-menu (shadcn CLI).
+- `src/visual/marca.tsx`: marca centralizada (placeholder em Sora + seta até chegar o logo claro).
+- `src/visual/layout/`: `app-shell.tsx`, `sidebar.tsx`, `cabecalho.tsx`, `troca-perfil.tsx`, `navegacao.ts` — casca, menu, busca visual, sino, avatar e troca de perfil.
+- `src/visual/componentes/`: `cabecalho-pagina`, `cartao`, `progresso`, `grafico-evolucao` (SVG, sem Recharts).
+- `src/visual/paginas/`: `gestor-inicio.tsx`, `funcionario-inicio.tsx`, `em-breve.tsx` (seções ainda não implementadas).
+- `src/dados/`: `gestor.ts` e `funcionario.ts` — dados de exemplo estáticos, sem API.
 - `src/visual/chip.tsx`: etiquetas de status e categoria.
 - `src/visual/campo.ts`: campo visual reutilizável.
 - `src/visual/tela.tsx`: estrutura de tela e estatísticas.
 - `src/visual/utils.ts`: composição de classes.
-- `src/App.tsx`: entrada provisória; deve evoluir para o dashboard do funcionário.
+- `src/App.tsx`: rotas `/gestor`, `/funcionario` e seções; `/` redireciona para `/gestor`.
 - `src/main.tsx`: entrada React.
 
 ## Fora da base ativa
